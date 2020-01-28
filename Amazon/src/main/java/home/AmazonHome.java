@@ -25,9 +25,9 @@ public class AmazonHome extends CommonAPI {
         List<String> itemsList = new ArrayList<>();
         itemsList.add("green tea kit kat");
         itemsList.add("godiva dark chocolate");
-        itemsList.add("samsung galaxy s10");
-        itemsList.add("gopro");
-        itemsList.add("headphone");
+//        itemsList.add("samsung galaxy s10");
+//        itemsList.add("gopro");
+//        itemsList.add("headphone");
 
         return itemsList;
 
