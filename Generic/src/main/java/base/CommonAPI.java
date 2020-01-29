@@ -60,7 +60,7 @@ public class CommonAPI {
     public WebDriver getLocalDriver(@Optional("mac") String OS, String browserName){
         if(browserName.equalsIgnoreCase("chrome")){
             if(OS.equalsIgnoreCase("OS X")){
-                System.setProperty("webdriver.chrome.driver", "..Generic/src/main/driver/chromedriver");
+                System.setProperty("webdriver.chrome.driver", "../Generic/src/main/driver/chromedriver");
             }else if(OS.equalsIgnoreCase("Windows")){
                 System.setProperty("webdriver.chrome.driver", "..\\Generic\\src\\main\\driver\\chromedriver.exe");
             }
@@ -69,7 +69,7 @@ public class CommonAPI {
             ChromeOptions options = new ChromeOptions();
             options.addArguments("--disable-notifications");
             if(OS.equalsIgnoreCase("OS X")){
-                System.setProperty("webdriver.chrome.driver", "..Generic/src/main/driver/chromedriver");
+                System.setProperty("webdriver.chrome.driver", "../Generic/src/main/driver/chromedriver");
             }else if(OS.equalsIgnoreCase("Windows")){
                 System.setProperty("webdriver.chrome.driver", "..\\Generic\\src\\main\\driver\\chromedriver.exe");
             }
