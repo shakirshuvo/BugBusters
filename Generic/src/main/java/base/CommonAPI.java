@@ -78,7 +78,7 @@ public class CommonAPI {
 
         else if(browserName.equalsIgnoreCase("firefox")){
             if(OS.equalsIgnoreCase("OS X")){
-                System.setProperty("webdriver.gecko.driver", "..Generic/src/main/driver/geckodriver");
+                System.setProperty("webdriver.gecko.driver", "../Generic/src/main/driver/geckodriver");
             }else if(OS.equalsIgnoreCase("Windows")) {
                 System.setProperty("webdriver.gecko.driver", "..\\Generic\\src\\main\\driver\\geckodriver.exe");
             }
