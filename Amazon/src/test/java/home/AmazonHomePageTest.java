@@ -65,5 +65,10 @@ public class AmazonHomePageTest extends CommonAPI {
         amazonHomePage.clickOnCartTab();
     }
 
-    // Adding a comment for test purpose
+    @Test (priority = 10)
+    public void musicLink() {
+        AmazonHomePage amazonHomePage = PageFactory.initElements(driver, AmazonHomePage.class);
+        amazonHomePage.clickMusic();
+    }
+
 }

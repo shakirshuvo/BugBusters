@@ -44,6 +44,13 @@ public class AmazonHomePage extends CommonAPI {
     @FindBy(xpath = "//h1[contains(text(),'Hello. What can we help you with?')]")
     public WebElement helpText;
 
+    @FindBy(xpath = "//a[text()='Amazon Music']")
+    public static WebElement music;
+
+
+    public static WebElement getMusic() {
+        return music;
+    }
 
     public static WebElement getTodaysDealsWebElement() {
         return todaysDealsWebElement;
@@ -123,6 +130,10 @@ public class AmazonHomePage extends CommonAPI {
 
     public void clickOnCartTab() {
         getCartWebElement().click();
+    }
+
+    public void clickMusic() {
+        getMusic().click();
     }
 
 }
