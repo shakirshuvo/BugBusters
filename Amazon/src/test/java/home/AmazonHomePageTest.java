@@ -64,4 +64,6 @@ public class AmazonHomePageTest extends CommonAPI {
         AmazonHomePage amazonHomePage = PageFactory.initElements(driver, AmazonHomePage.class);
         amazonHomePage.clickOnCartTab();
     }
+
+    // Adding a comment for test purpose
 }
