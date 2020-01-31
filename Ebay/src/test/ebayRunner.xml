@@ -13,7 +13,7 @@
 
     <test name="Ebay Home">
         <classes>
-            <class name="home.HomePage"/>
+            <class name="home.ebayHomePage"/>
         </classes>
     </test>
 

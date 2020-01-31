@@ -3,7 +3,7 @@ package home;
 import base.CommonAPI;
 import org.testng.annotations.Test;
 
-public class HomePage extends CommonAPI {
+public class ebayHomePage extends CommonAPI {
 
 
     @Test(enabled = false)
