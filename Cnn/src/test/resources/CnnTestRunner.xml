@@ -13,7 +13,7 @@
 
     <test name="Cnn Home">
         <classes>
-            <class name="home.CnnHomePageTest"/>
+<!--            <class name="home.CnnHomePageTest"/>-->
         </classes>
     </test>
 
