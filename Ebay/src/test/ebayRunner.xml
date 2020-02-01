@@ -14,6 +14,7 @@
     <test name="Ebay Home">
         <classes>
             <class name="home.ebayHomePage"/>
+            <class name="home.ebayHomePOMTest"/>
         </classes>
     </test>
 
