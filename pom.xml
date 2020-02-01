@@ -16,6 +16,7 @@
         <module>Facebook</module>
         <module>Ebay</module>
         <module>Netflix</module>
+        <module>HomeDepot</module>
     </modules>
 
     <dependencyManagement>
