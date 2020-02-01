@@ -17,7 +17,7 @@ public class AmazonHomePage extends CommonAPI {
     @FindBy(how = How.XPATH, using = "//*[@id=\"nav-xshop\"]/a[2]")
     public static WebElement helpWebElement;
 
-    @FindBy(how = How.CSS, using = "//a[text()='Registry']")
+    @FindBy(how = How.XPATH, using = "//a[text()='Registry']")
     public static WebElement registryWebElement;
 
     @FindBy(how = How.CSS, using = "//a[text()='Gift Cards']")
@@ -46,6 +46,24 @@ public class AmazonHomePage extends CommonAPI {
 
     @FindBy(xpath = "//a[text()='Amazon Music']")
     public static WebElement music;
+
+    @FindBy(xpath = "//*[@id=\"contentGrid_336610\"]/div/div[1]/div/div/div/img")
+    public WebElement registerWithAmazonPic;
+
+    @FindBy(xpath = "//*[@id=\"contentGrid_981757\"]/div/div/div/div/div/img")
+    public WebElement giftCardsPic;
+
+    @FindBy(xpath = "//*[@id=\"eventColor\"]/div[3]/div/div/div[1]/div/div[1]/div[3]/div/div/a")
+    public WebElement startSellingPic;
+
+    @FindBy(xpath = "//*[@id=\"authportal-main-section\"]/div[2]/div/div[1]/form/div/div/div/h1")
+    public WebElement signInText;
+
+    @FindBy(xpath = "//*[@id=\"sc-active-cart\"]/div/h1[1]")
+    public WebElement yourShoppingCartIsEmptyText;
+
+    @FindBy(xpath = "//*[@id=\"amazonMusicLogo\"]")
+    public WebElement amazonMusicLogo;
 
 
     public static WebElement getMusic() {
@@ -92,7 +110,11 @@ public class AmazonHomePage extends CommonAPI {
         return helpText;
     }
 
-    public boolean checkGetHelpText() {
+    public WebElement getRegisterWithAmazonPic() {
+        return registerWithAmazonPic;
+    }
+
+    public boolean checkIfGetHelpText() {
         return getHelpText().isDisplayed();
     }
 
@@ -134,6 +156,10 @@ public class AmazonHomePage extends CommonAPI {
 
     public void clickMusic() {
         getMusic().click();
+    }
+
+    public boolean checkIfregisterWithAmazonPic() {
+       return getRegisterWithAmazonPic().isDisplayed();
     }
 
 }

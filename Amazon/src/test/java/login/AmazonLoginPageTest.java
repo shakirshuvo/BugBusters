@@ -1,24 +1,24 @@
 package login;
 
 import base.CommonAPI;
-import home.AmazonHomePage;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class AmazonLoginPageTest extends CommonAPI {
 
+
+// This positive test tests user can log in successfully with valid credentials.
     @Test
-    public void todaysDealsTab() {
+    public void amazonLogIn() {
         AmazonLoginPage amazonLoginPage = PageFactory.initElements(driver, AmazonLoginPage.class);
-        amazonLoginPage.clickOnHelloSignIn();
+        amazonLoginPage.signInSecurely.click();
         amazonLoginPage.enterSignInEmailAddress();
         amazonLoginPage.clickOnContinueSignIn();
         amazonLoginPage.enterSignInPassword();
         amazonLoginPage.clickOnSignIn();
-        boolean shakirsDisplayed = amazonLoginPage.displayHelloShakir();
-        Assert.assertEquals(shakirsDisplayed, true);
-
+//        Assert.assertEquals(amazonLoginPage.displayHelloShakir(), true);
+        Assert.assertEquals(amazonLoginPage.hiShakir.isDisplayed(), true);
 
     }
 }

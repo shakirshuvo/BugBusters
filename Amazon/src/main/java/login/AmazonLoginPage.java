@@ -10,6 +10,9 @@ public class AmazonLoginPage extends CommonAPI {
     @FindBy(how = How.XPATH, using = "//*[@id=\"nav-link-accountList\"]/span[1]")
     public static WebElement helloSignIn;
 
+    @FindBy(how = How.ID, using = "a-autoid-0-announce")
+    public static WebElement signInSecurely;
+
     @FindBy(how = How.ID, using = "ap_email")
     public static WebElement signInEmailAddress;
 
@@ -27,6 +30,12 @@ public class AmazonLoginPage extends CommonAPI {
 
     @FindBy(how = How.CSS, using ="//span[text()='Hello, Shakir']")
     public static WebElement helloShakir;
+
+    @FindBy(xpath = "//h2[text()='Hi, Shakir']")
+    public WebElement hiShakir;
+
+    @FindBy(id = "nav-your-amazon-text")
+    public WebElement shakirsAmazonCom;
 
 
     public static WebElement getHelloSignIn() {
