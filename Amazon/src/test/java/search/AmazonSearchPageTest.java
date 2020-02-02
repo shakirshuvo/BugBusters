@@ -8,11 +8,13 @@ import org.testng.annotations.Test;
 
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class AmazonSearchPageTest extends CommonAPI {
 
+    // Tests hardcoded search item
     @Test
-    public void searchItems() {
+    public void searchItemsHardcoded() {
         AmazonSearchPage amazonSearchPage = PageFactory.initElements(driver, AmazonSearchPage.class);
         amazonSearchPage.clearTypeAndClickOnSearch();
         Assert.assertNotNull(amazonSearchPage.getItems(), "watch");
@@ -24,5 +26,12 @@ public class AmazonSearchPageTest extends CommonAPI {
         AmazonSearchPage amazonSearchPage = PageFactory.initElements(driver, AmazonSearchPage.class);
         amazonSearchPage.doProductSearch();
         Assert.assertNotNull("iPhone");
+    }
+
+// Tests data from MySQL database
+    @Test
+    public void searchItems()throws Exception, IOException, SQLException, ClassNotFoundException{
+        AmazonSearchPage searchPage = PageFactory.initElements(driver, AmazonSearchPage.class);
+        searchPage.searchItemsAndSubmitButton();
     }
 }
