@@ -28,9 +28,9 @@ public class AmazonSearchPageTest extends CommonAPI {
         Assert.assertNotNull("iPhone");
     }
 
-// Tests data from MySQL database
+    // Tests data from MySQL database
     @Test
-    public void searchItems()throws Exception, IOException, SQLException, ClassNotFoundException{
+    public void searchItems() throws Exception, IOException, SQLException, ClassNotFoundException {
         AmazonSearchPage searchPage = PageFactory.initElements(driver, AmazonSearchPage.class);
         searchPage.searchItemsAndSubmitButton();
     }
