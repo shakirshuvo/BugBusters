@@ -1,10 +1,13 @@
 package search;
 
 import base.CommonAPI;
+import datasuply.DataSource;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
+import java.io.IOException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -42,6 +45,15 @@ public class AmazonSearchPage extends CommonAPI {
             clearInputBox();
             typeItemName(list.get(i));
             clickOnSearch();
+        }
+    }
+
+    public void searchItemsAndSubmitButton()throws Exception, IOException, SQLException, ClassNotFoundException{
+        List<String> list = DataSource.getItemsListFromDB();
+        for(int i=0; i<list.size(); i++) {
+            typeItemName(list.get(i));
+            clickOnSearch();
+            clearInputBox();
         }
     }
 
