@@ -22,7 +22,7 @@ public class AmazonSearchPageTest extends CommonAPI {
     @Test
     public void searchItemsIphone() {
         AmazonSearchPage amazonSearchPage = PageFactory.initElements(driver, AmazonSearchPage.class);
-        amazonSearchPage.testProductSearch();
+        amazonSearchPage.doProductSearch();
         Assert.assertNotNull("iPhone");
     }
 }

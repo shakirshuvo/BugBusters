@@ -53,7 +53,7 @@ public class AmazonSearchPage extends CommonAPI {
         return itemsList;
     }
 
-    public void testProductSearch() {
+    public void doProductSearch() {
         typeItemName("iPhone");
         clickOnSearch();
     }
