@@ -65,6 +65,14 @@ public class AmazonSearchPage extends CommonAPI {
         return itemsList;
     }
 
+    public List<String> searchItemsHardcoded() {
+        List<String> itemsList = new ArrayList<>();
+        itemsList.add("watch");
+        itemsList.add("Rage Against The Machine");
+
+        return itemsList;
+    }
+
     public void doProductSearch() {
         typeItemName("iPhone");
         clickOnSearch();
