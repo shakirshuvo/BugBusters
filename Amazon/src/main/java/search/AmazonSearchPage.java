@@ -19,12 +19,19 @@ public class AmazonSearchPage extends CommonAPI {
     @FindBy(how = How.CSS, using = ".nav-input")
     public static WebElement submitWebElement;
 
+    @FindBy(how = How.ID, using = "searchDropdownBox")
+    public static WebElement allDropDownWebElement;
+
     public static WebElement getSearchInputWebElement() {
         return searchInputWebElement;
     }
 
     public static WebElement getSubmitWebElement() {
         return submitWebElement;
+    }
+
+    public static WebElement getAllDropDownWebElement() {
+        return allDropDownWebElement;
     }
 
     public void clearInputBox() {
