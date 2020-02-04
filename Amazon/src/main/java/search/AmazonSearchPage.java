@@ -5,6 +5,7 @@ import datasuply.DataSource;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import reporting.TestLogger;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -55,9 +56,9 @@ public class AmazonSearchPage extends CommonAPI {
         }
     }
 
-    public void searchItemsAndSubmitButton()throws Exception, IOException, SQLException, ClassNotFoundException{
+    public void searchItemsAndSubmitButton() throws Exception, IOException, SQLException, ClassNotFoundException {
         List<String> list = DataSource.getItemsListFromDB();
-        for(int i=0; i<list.size(); i++) {
+        for (int i = 0; i < list.size(); i++) {
             typeItemName(list.get(i));
             clickOnSearch();
             clearInputBox();
@@ -65,6 +66,8 @@ public class AmazonSearchPage extends CommonAPI {
     }
 
     public List<String> getItems() {
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
         List<String> itemsList = new ArrayList<>();
         itemsList.add("watch");
         itemsList.add("Rage Against The Machine");
@@ -73,6 +76,8 @@ public class AmazonSearchPage extends CommonAPI {
     }
 
     public List<String> searchItemsHardcoded() {
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
         List<String> itemsList = new ArrayList<>();
         itemsList.add("watch");
         itemsList.add("Rage Against The Machine");
@@ -81,6 +86,8 @@ public class AmazonSearchPage extends CommonAPI {
     }
 
     public void doProductSearch() {
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
         typeItemName("iPhone");
         clickOnSearch();
     }

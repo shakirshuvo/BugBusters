@@ -4,6 +4,7 @@ import base.CommonAPI;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import reporting.TestLogger;
 
 public class AmazonHomePageTest extends CommonAPI {
 
@@ -11,6 +12,7 @@ public class AmazonHomePageTest extends CommonAPI {
     @Test(priority = 1)
     public void amazonHomePageTitle() {
         AmazonHomePage amazonHomePage = PageFactory.initElements(driver, AmazonHomePage.class);
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         Assert.assertEquals(driver.getTitle(), "Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs & more");
     }
 

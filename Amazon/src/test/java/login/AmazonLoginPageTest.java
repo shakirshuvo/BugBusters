@@ -4,6 +4,7 @@ import base.CommonAPI;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import reporting.TestLogger;
 
 public class AmazonLoginPageTest extends CommonAPI {
 
@@ -12,6 +13,7 @@ public class AmazonLoginPageTest extends CommonAPI {
     @Test
     public void amazonLogIn() {
         AmazonLoginPage amazonLoginPage = PageFactory.initElements(driver, AmazonLoginPage.class);
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         amazonLoginPage.signInSecurely.click();
         amazonLoginPage.enterSignInEmailAddress();
         amazonLoginPage.clickOnContinueSignIn();
