@@ -2,6 +2,7 @@ package home;
 
 import base.CommonAPI;
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.FindBy;
 import org.testng.annotations.Test;
 
 public class HomePage extends CommonAPI {
@@ -12,8 +13,8 @@ public class HomePage extends CommonAPI {
         driver.findElement(By.id("pass")).sendKeys(password);
         driver.findElement(By.cssSelector("input[value='Log In']")).click();
     }
-
 }
+
 
 
 
