@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="Cnn Automation Script " parallel="false">
+<suite name="Home Depot Automation Script " parallel="false">
 
     <parameter name="useCloudEnv" value="false"/>
     <parameter name="cloudEnvName" value="browserstack"/>
@@ -9,11 +9,11 @@
     <parameter name="os_version" value="10"/>
     <parameter name="browserName" value="chrome"/>
     <parameter name="browserVersion" value="78.0"/>
-    <parameter name="url" value="https://www.cnn.com"/>
+    <parameter name="url" value="https://www.homedepot.com"/>
 
-    <test name="Cnn Home">
+    <test name="Home Depot Home">
         <classes>
-<!--            <class name="home.CnnHomePageTest"/>-->
+<!--            <class name="home.HomeDepotHomePageTest"/>-->
         </classes>
     </test>
 

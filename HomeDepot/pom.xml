@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>Facebook</artifactId>
+    <artifactId>HomeDepot</artifactId>
 
     <dependencies>
         <dependency>
@@ -34,9 +34,9 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M3</version>
                 <configuration>
-                                        <suiteXmlFiles>
-                                            <suiteXmlFiles>target/test-classes/FacebookTestRunner.xml</suiteXmlFiles>
-                                        </suiteXmlFiles>
+                    <suiteXmlFiles>
+                        <suiteXmlFiles>target/test-classes/HomeDepotTestRunner.xml</suiteXmlFiles>
+                    </suiteXmlFiles>
                 </configuration>
             </plugin>
         </plugins>

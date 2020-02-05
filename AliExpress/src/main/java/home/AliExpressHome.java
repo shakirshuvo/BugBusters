@@ -1,30 +1,34 @@
 package home;
 
 import base.CommonAPI;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.remote.server.handler.ImplicitlyWait;
 import org.testng.annotations.Test;
 
 public class AliExpressHome extends CommonAPI {
 
-    @Test
-    public void testUntitledTestCase1() throws Exception {
-        driver.get("https://www.aliexpress.com/");
-        driver.findElement(By.linkText("x")).click();
-        driver.findElement(By.id("search-key")).click();
-        driver.findElement(By.id("search-key")).clear();
-        driver.findElement(By.id("search-key")).sendKeys("final fantasy");
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.Select;
+import reporting.TestLogger;
 
-    }
 
-    @Test
-    public void testUntitledTestCase2() throws Exception {
-        driver.get("https://www.aliexpress.com/");
-        driver.findElement(By.linkText("x")).click();
-        driver.findElement(By.id("search-key")).click();
-        driver.findElement(By.id("search-key")).clear();
-        driver.findElement(By.id("search-key")).sendKeys("Lighters");
+public class AliExpressHome extends CommonAPI {
 
-    }
+    @FindBy(id = "Sign in")
+    public WebElement signIn;
+
+    @FindBy(xpath = "//input[@id='fm-login-id']")
+    public WebElement logIn;
+
+    @FindBy(xpath = "//input[@id='fm-login-password']")
+    public WebElement passwordInput;
+
+    @FindBy(xpath = "//form[@id='login-form']//button[@type='submit']")
+    public WebElement loggingIn;
+
+    //public static WebElement getSignIn() {return SigningIn;}
 
 }
+

@@ -7,7 +7,7 @@ import org.openqa.selenium.support.How;
 
 public class CnnHomePage extends CommonAPI {
 
-    @FindBy(how = How.XPATH, using = "//*[@id=\"header-nav-container\"]/div/div[2]/div/div[3]/nav/ul/li[1]/a")
+    @FindBy(how = How.XPATH, using = "//*[@id=\"footer-nav-container\"]/div[2]/div/div/nav/ul/li[1]/a")
     public static WebElement usWebElement;
 
     @FindBy(how = How.XPATH, using = "//*[@id=\"homepage3-zone-1\"]/div[6]/div/div[4]/ul/a/h2")

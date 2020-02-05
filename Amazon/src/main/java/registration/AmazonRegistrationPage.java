@@ -7,12 +7,12 @@ import org.openqa.selenium.support.How;
 public class AmazonRegistrationPage {
 
     @FindBy(how = How.XPATH, using = "//*[@id=\"nav-link-accountList\"]/span[1]")
-    public static WebElement helloSignIn;
+    public WebElement helloSignIn;
 
     @FindBy(how = How.ID, using = "createAccountSubmit")
     public static WebElement createYourAmazonAccount;
 
-    @FindBy(how = How.ID, using = "p_customer_name")
+    @FindBy(how = How.CSS, using = "input[id='ap_customer_name']")
     public static WebElement createAccountName;
 
     @FindBy(how = How.ID, using = "ap_email")
@@ -27,12 +27,15 @@ public class AmazonRegistrationPage {
     @FindBy(how = How.CLASS_NAME, using = "a-button-input")
     public static WebElement createYourAmazonAccountFinal;
 
-    @FindBy(how = How.CLASS_NAME, using = "//*[@id=\"auth-password-mismatch-alert\"]/div/div")
-    public static WebElement alertPasswordMustMatch;
+    @FindBy(how = How.XPATH, using = "//*[@id=\"auth-password-mismatch-alert\"]/div/div")
+    public WebElement alertPasswordMustMatch;
 
-    public static WebElement getHelloSignIn () {
-        return helloSignIn;
-    }
+    @FindBy(how = How.XPATH, using = "//*[@id=\"auth-password-mismatch-alert\"]/div/i")
+    public WebElement getAlertPasswordMustMatchIcon;
+
+//    public static WebElement getHelloSignIn () {
+//        return helloSignIn;
+//    }
     public static WebElement getCreateYourAmazonAccount () {
         return createYourAmazonAccount;
     }
@@ -51,10 +54,10 @@ public class AmazonRegistrationPage {
     public static WebElement getCreateYourAmazonAccountFinal () {
         return createYourAmazonAccountFinal;
     }
-
-    public void clickOnHelloSignIn() {
-        getHelloSignIn().click();
-    }
+//
+//    public void clickOnHelloSignIn() {
+//        getHelloSignIn().click();
+//    }
     public void clickOnCreateYourAmazonAccount() {
         getCreateYourAmazonAccount().click();
     }
@@ -63,6 +66,9 @@ public class AmazonRegistrationPage {
     }
     public void enterCreateAccountEmail() {
         getCreateAccountEmail().sendKeys("john.doe2sf8@gmail.com");
+    }
+    public void enterCreateAccountInvalidEmail() {
+        getCreateAccountEmail().sendKeys("john.doe2sf8@");
     }
     public void enterCreateAccountPassword() {
         getCreateAccountPassword().sendKeys("BugBusters");

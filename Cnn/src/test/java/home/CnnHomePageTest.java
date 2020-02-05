@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 public class CnnHomePageTest extends CommonAPI {
 
-    @Test
+    @Test (priority = 1)
     public void cnnHomePageTitle() {
         CnnHomePage amazonHomePage = PageFactory.initElements(driver, CnnHomePage.class);
         Assert.assertEquals(driver.getTitle(), "CNN - Breaking News, Latest News and Videos");
