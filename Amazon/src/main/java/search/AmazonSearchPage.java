@@ -36,18 +36,26 @@ public class AmazonSearchPage extends CommonAPI {
     }
 
     public void clearInputBox() {
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
         getSearchInputWebElement().clear();
     }
 
     public void typeItemName(String value) {
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()+ ": "+ value));
         getSearchInputWebElement().sendKeys(value);
     }
 
     public void clickOnSearch() {
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
         getSubmitWebElement().click();
     }
 
     public void clearTypeAndClickOnSearch() {
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
         List<String> list = getItems();
         for (int i = 0; i < list.size(); i++) {
             clearInputBox();
@@ -57,6 +65,8 @@ public class AmazonSearchPage extends CommonAPI {
     }
 
     public void searchItemsAndSubmitButton() throws Exception, IOException, SQLException, ClassNotFoundException {
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
         List<String> list = DataSource.getItemsListFromDB();
         for (int i = 0; i < list.size(); i++) {
             typeItemName(list.get(i));

@@ -9,11 +9,12 @@ import reporting.TestLogger;
 public class AmazonLoginPageTest extends CommonAPI {
 
 
-// This positive test tests user can log in successfully with valid credentials.
+    // This positive test tests user can log in successfully with valid credentials.
     @Test
     public void amazonLogIn() {
         AmazonLoginPage amazonLoginPage = PageFactory.initElements(driver, AmazonLoginPage.class);
-        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
         amazonLoginPage.signInSecurely.click();
         amazonLoginPage.enterSignInEmailAddress();
         amazonLoginPage.clickOnContinueSignIn();
@@ -23,4 +24,14 @@ public class AmazonLoginPageTest extends CommonAPI {
         Assert.assertEquals(amazonLoginPage.hiShakir.isDisplayed(), true);
 
     }
+
+    // Tests the title of the Sign-In page.
+    @Test
+    public void testAmazonLogInPageTitle() {
+        AmazonLoginPage amazonLoginPage = PageFactory.initElements(driver, AmazonLoginPage.class);
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
+        amazonLoginPage.getAmazonSignInPageTitle();
+    }
+
 }

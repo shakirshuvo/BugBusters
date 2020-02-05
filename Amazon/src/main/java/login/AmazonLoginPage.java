@@ -4,11 +4,18 @@ import base.CommonAPI;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+import reporting.TestLogger;
 
 public class AmazonLoginPage extends CommonAPI {
 
     @FindBy(how = How.XPATH, using = "//*[@id=\"nav-link-accountList\"]/span[1]")
     public static WebElement helloSignIn;
+
+    @FindBy(xpath = "//*[@id=\"nav-signin-tooltip\"]/a/span")
+    private WebElement signInPopUpButton;
 
     @FindBy(how = How.ID, using = "a-autoid-0-announce")
     public static WebElement signInSecurely;
@@ -84,5 +91,21 @@ public class AmazonLoginPage extends CommonAPI {
     }
     public boolean displayHelloShakir() {
         return getHelloShakir().isDisplayed();
+    }
+
+    public void clickOnSignInPopUpButton() {
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(this.signInPopUpButton));
+        this.signInPopUpButton.click();
+    }
+    public void getAmazonSignInPageTitle() {
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
+        clickOnSignInPopUpButton();
+        String expectedTitle = "Amazon Sign-In";
+        String actualTitle = driver.getTitle();
+        Assert.assertEquals(expectedTitle, actualTitle);
     }
 }
