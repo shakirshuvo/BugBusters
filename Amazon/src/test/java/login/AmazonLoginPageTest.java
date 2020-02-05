@@ -31,7 +31,6 @@ public class AmazonLoginPageTest extends CommonAPI {
         amazonLoginPage.clickOnSignIn();
 //        Assert.assertEquals(amazonLoginPage.displayHelloShakir(), true);
         Assert.assertEquals(amazonLoginPage.hiShakir.isDisplayed(), true);
-
     }
 
 }
