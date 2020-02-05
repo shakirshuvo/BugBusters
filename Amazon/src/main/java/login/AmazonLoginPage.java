@@ -4,12 +4,9 @@ import base.CommonAPI;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
 import reporting.TestLogger;
 
 import java.util.concurrent.TimeUnit;
@@ -132,17 +129,4 @@ public class AmazonLoginPage extends CommonAPI {
         Assert.assertEquals(expectedTitle, actualTitle);
     }
 
-    @DataProvider(name = "validLogins")
-    public static Object[][] twoLoginsCredentials() {
-        return new Object[][]{{"masood.57@xhanimatedm.com", "BugBusters"},
-                {"ciara105@xhanimatedm.com", "BugBusters"}};
-    }
-
-    @Test(dataProvider = "validLogins")
-    public void twoUsersCanLogInSuccessfully(String email, String password) {
-        AmazonLoginPage amazonLoginPage = PageFactory.initElements(driver, AmazonLoginPage.class);
-        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
-        }.getClass().getEnclosingMethod().getName()));
-        amazonLoginPage.signIn(email, password);
-    }
 }

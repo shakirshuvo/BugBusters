@@ -17,7 +17,6 @@
 <!--            <class name="search.AmazonSearchPageTest"/>-->
             <class name="login.AmazonLoginPageTest"/>
 <!--            <class name="registration.AmazonRegistrationTest"/>-->
-<!--            <class name="login.AmazonLoginPage"/>-->
         </classes>
     </test>
 
