@@ -46,6 +46,9 @@ public class AmazonLoginPage extends CommonAPI {
     @FindBy(id = "nav-your-amazon-text")
     public WebElement shakirsAmazonCom;
 
+    @FindBy(xpath = "//*[@id=\"cvf-page-content\"]/p[1]")
+    public WebElement captcha;
+
 
     public static WebElement getHelloSignIn() {
         return helloSignIn;
@@ -118,6 +121,9 @@ public class AmazonLoginPage extends CommonAPI {
         this.continueSignIn.click();
         this.signInPassword.sendKeys(password);
         this.signIn.click();
+    }
+    public void signInWithShakirJahangir83(){
+        signIn("shakir.jahangir83@gmail.com", "BugBusters");
     }
 
     public void getAmazonSignInPageTitle() {
