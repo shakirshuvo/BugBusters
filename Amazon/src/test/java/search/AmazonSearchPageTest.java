@@ -15,26 +15,23 @@ public class AmazonSearchPageTest extends CommonAPI {
 
     // Tests hardcoded search item
     @Test
-    public void searchItemsHardcoded() {
+    public void testSearchItemsHardcoded() {
         AmazonSearchPage amazonSearchPage = PageFactory.initElements(driver, AmazonSearchPage.class);
         TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         amazonSearchPage.clearTypeAndClickOnSearch();
-        Assert.assertNotNull(amazonSearchPage.getItems(), "watch");
-        Assert.assertNotNull(amazonSearchPage.getItems(), "Rage Against The Machine");
     }
 
     // Tests single item (iPhone) hardcoded.
     @Test
-    public void searchItemsIphone() {
+    public void testSearchItemsIphone() {
         AmazonSearchPage amazonSearchPage = PageFactory.initElements(driver, AmazonSearchPage.class);
         TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         amazonSearchPage.doProductSearch();
-        Assert.assertNotNull("iPhone");
     }
 
     // Tests data from MySQL database
     @Test
-    public void searchItems() throws Exception, IOException, SQLException, ClassNotFoundException {
+    public void testSearchItems() throws Exception, IOException, SQLException, ClassNotFoundException {
         AmazonSearchPage searchPage = PageFactory.initElements(driver, AmazonSearchPage.class);
         TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         searchPage.searchItemsAndSubmitButton();
