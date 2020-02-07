@@ -49,6 +49,8 @@ public class AmazonLoginPage extends CommonAPI {
     @FindBy(xpath = "//*[@id=\"cvf-page-content\"]/p[1]")
     public WebElement captcha;
 
+    @FindBy(xpath = "//h4[text()='There was a problem']")
+    public WebElement invalidEmailAlert;
 
     public static WebElement getHelloSignIn() {
         return helloSignIn;
@@ -122,8 +124,10 @@ public class AmazonLoginPage extends CommonAPI {
         this.signInPassword.sendKeys(password);
         this.signIn.click();
     }
+
     public void signInWithShakirJahangir83(){
         signIn("shakir.jahangir83@gmail.com", "BugBusters");
+        Assert.assertEquals(captcha.isDisplayed(), true);
     }
 
     public void getAmazonSignInPageTitle() {
@@ -135,4 +139,15 @@ public class AmazonLoginPage extends CommonAPI {
         Assert.assertEquals(expectedTitle, actualTitle);
     }
 
+    public void signInWithInvalidEmail() {
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
+        clickOnSignInPopUpButton();
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        this.signInEmailAddress.sendKeys("shakirshuvo2343897@hotmail.com");
+        this.continueSignIn.click();
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        invalidEmailAlert.isDisplayed();
+        Assert.assertEquals(invalidEmailAlert.isDisplayed(), true);
+    }
 }

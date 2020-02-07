@@ -30,39 +30,36 @@ public class AmazonHomePageTest extends CommonAPI {
         TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         amazonHomePage.clickOnHelpTab();
         Assert.assertEquals(amazonHomePage.checkIfGetHelpText(), true);
-
     }
 
     @Test(priority = 4)
-    public void registryTab() {
+    public void testRegistryTitle() {
         AmazonHomePage amazonHomePage = PageFactory.initElements(driver, AmazonHomePage.class);
-        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
-        amazonHomePage.clickOnRegistryTab();
-        Assert.assertEquals(amazonHomePage.registerWithAmazonPic.isDisplayed(), true);
+        amazonHomePage.registryTitle();
+    }
+
+    @Test(priority = 4)
+    public void testRegistryTab() {
+        AmazonHomePage amazonHomePage = PageFactory.initElements(driver, AmazonHomePage.class);
+        amazonHomePage.registryTab();
     }
 
     @Test(priority = 5)
-    public void giftCardsTab() {
+    public void testGiftCardsTitle() {
         AmazonHomePage amazonHomePage = PageFactory.initElements(driver, AmazonHomePage.class);
-        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
-        amazonHomePage.clickOnGiftCardsTab();
-        Assert.assertEquals(amazonHomePage.giftCardsPic.isDisplayed(), true);
+        amazonHomePage.giftCardsTitle();
     }
 
-    @Test(priority = 6)
-    public void sellTab() {
+    @Test (priority = 6)
+    public void testSellTitle() {
         AmazonHomePage amazonHomePage = PageFactory.initElements(driver, AmazonHomePage.class);
-        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
-        amazonHomePage.clickOnSellTab();
-        Assert.assertEquals(amazonHomePage.startSellingPic.isDisplayed(), true);
+        amazonHomePage.sellTitle();
     }
 
-    @Test(priority = 7)
-    public void yourAmazonComTab() {
+    @Test (priority = 7)
+    public void testGetYourAccountTitle() {
         AmazonHomePage amazonHomePage = PageFactory.initElements(driver, AmazonHomePage.class);
-        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
-        amazonHomePage.clickOnYourAmazonComTab();
-        Assert.assertEquals(amazonHomePage.signInText.isDisplayed(), true);
+        amazonHomePage.getYourAccountTitle();
     }
 
     @Test(priority = 8)
