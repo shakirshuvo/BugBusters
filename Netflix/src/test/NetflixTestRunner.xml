@@ -13,6 +13,12 @@
 
     <test name="Netflix Home">
         <classes>
+<!--            <class name="login.NetflixLoginHassanTest"></class>-->
+            <class name="login.NetflixLoginCookieTest"></class>
+            <class name="login.NetflixLoginChipsTest"></class>
+            <class name="login.NetflixLoginGumTest"></class>
+            <class name="login.NetflixLoginHassanTest"></class>
+            <class name="login.NetflixLoginChocolateTest"></class>
             <!--            <class name="home.NetflixHomePage"/>-->
             <!--            <class name="home.NetflixHomePOMTest"/>-->
         </classes>

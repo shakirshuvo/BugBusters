@@ -19,7 +19,6 @@
         <module>Facebook</module>
         <module>Twitter</module>
     </modules>
-
     <dependencyManagement>
         <dependencies>
             <dependency>

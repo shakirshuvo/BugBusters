@@ -4,7 +4,9 @@ import base.CommonAPI;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.testng.Assert;
 import org.testng.annotations.Test;
+import reporting.TestLogger;
 
 public class NetflixHome extends CommonAPI {
 
@@ -42,43 +44,6 @@ public class NetflixHome extends CommonAPI {
     public void clickLatest() {getLatestWebElement();}
 
     public void clickMyList() {getMyListWebElement();}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//
-//    clickByXpath("//div[@class='profile-icon']");
-//    sleepFor(3);
-//    clickByXpath("//a[@href='/browse/genre/83']");
-//    clickByXpath("//a[@href='/browse/genre/34399']");
-//    clickByXpath("//a[@href='/latest']");
-//    sleepFor(3);
-//    clickByXpath("//a[@href='/browse/my-list']");
-//    clickOnElement("//div[@class='nav-element']");
-//    sleepFor(3);
-//    typeOnInputBox(".searchBox", "You");
-//    clickByXpath("//div[@class='ptrack-content']//a[contains(text(), 'You Me Her')]");
-//    clickByXpath("//div[@class='ptrack-content']//a[contains(text(), 'Your Name')]");
-//    clickByXpath("//div[@class='ptrack-content']//a[contains(text(), 'Young Sheldon')]");
-//    clickByXpath("//div[@class='ptrack-content']//a[contains(text(), 'Young Guns')]");
-//    clickByXpath("//div[@class='ptrack-content']//a[contains(text(), 'Young and Dangerous')]");
-//    clickByXpath("//div[@class='ptrack-content']//a[contains(text(), 'The Young Pope')]");
-//    clickByXpath("//div[@class='ptrack-content']//a[contains(text(), 'Young Justice')]");
-//    clickByXpath("//div[@class='ptrack-content']//a[contains(text(), 'Young Frankenstein')]");
-//    clickByXpath("//div[@class='ptrack-content']//a[contains(text(), 'Younger')]");
-//    sleepFor(200);
-//}
 }
 
 
