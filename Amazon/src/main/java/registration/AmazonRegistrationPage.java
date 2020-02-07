@@ -7,6 +7,7 @@ import org.testng.Assert;
 import reporting.TestLogger;
 
 import static base.CommonAPI.convertToString;
+import static base.CommonAPI.driver;
 
 public class AmazonRegistrationPage {
 
@@ -39,6 +40,15 @@ public class AmazonRegistrationPage {
 
     @FindBy(xpath = "//*[@id=\"auth-email-invalid-email-alert\"]/div/div")
     public WebElement invalidEmailAlert;
+
+    @FindBy(xpath = "//*[@id=\"auth-password-invalid-password-alert\"]/div/div")
+    public WebElement passwordMustBe6CharactersAlert;
+
+    @FindBy(xpath = "//*[@id=\"auth-customerName-missing-alert\"]/div/div")
+    public WebElement enterYourNameAlert;
+
+    @FindBy(xpath = "//*[@id=\"auth-passwordCheck-missing-alert\"]/div/div")
+    public WebElement typeYourPasswordAgainAlert;
 
     //    public static WebElement getHelloSignIn () {
 //        return helloSignIn;
@@ -116,6 +126,35 @@ public class AmazonRegistrationPage {
         clickOnCreateYourAmazonAccount();
     }
 
+    public void createYourAccountPageTitle() {
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
+        goToCreateYourAccountPage();
+        Assert.assertEquals(driver.getTitle(), "Amazon Registration");
+    }
+
+    public void createAccountFailWithoutYourName() {
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
+        goToCreateYourAccountPage();
+        enterCreateAccountEmail();
+        enterCreateAccountPassword();
+        enterCreateAccountReEnterPassword();
+        clickOnCreateYourAmazonAccountFinal();
+        Assert.assertEquals(enterYourNameAlert.isDisplayed(), true);
+    }
+
+    public void createAccountFailWithPasswordNotReEntered() {
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
+        goToCreateYourAccountPage();
+        enterCreateAccountName();
+        enterCreateAccountEmail();
+        enterCreateAccountPassword();
+        clickOnCreateYourAmazonAccountFinal();
+        Assert.assertEquals(typeYourPasswordAgainAlert.isDisplayed(), true);
+    }
+
     public void createAccountFailWithPasswordMisMatch() {
         TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
         }.getClass().getEnclosingMethod().getName()));
@@ -126,6 +165,18 @@ public class AmazonRegistrationPage {
         enterCreateAccountReEnterUnmatchedPassword();
         clickOnCreateYourAmazonAccountFinal();
         Assert.assertEquals(getAlertPasswordMustMatchIcon.isDisplayed(), true);
+    }
+
+    public void createAccountFailWithPasswordLessThanSixCharacters() {
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
+        goToCreateYourAccountPage();
+        enterCreateAccountName();
+        enterCreateAccountEmail();
+        enterCreateAccountPassword5Char();
+        enterCreateAccountReEnterPassword5Char();
+        clickOnCreateYourAmazonAccountFinal();
+        Assert.assertEquals(passwordMustBe6CharactersAlert.isDisplayed(), true);
     }
 
     public void createAccountFailWithInvalidEmail() {
