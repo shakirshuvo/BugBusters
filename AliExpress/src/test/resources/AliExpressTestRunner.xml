@@ -9,13 +9,13 @@
     <parameter name="os_version" value="Sierra"/>
     <parameter name="browserName" value="chrome"/>
     <parameter name="browserVersion" value="75.0"/>
-    <parameter name="url" value="https://www.aliexpress.com"/>
+    <parameter name="url" value="https://www.AliExpress.com"/>
 
-    <test name="Amazon Home">
+    <test name="AliExpress Home">
         <classes>
-<!--            <class name="home.AliExpressHome"></class>-->
-<!--            <class name="home.AliExpressHome"/>-->
+
         </classes>
+
     </test>
 
 </suite>

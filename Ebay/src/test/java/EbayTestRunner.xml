@@ -13,7 +13,9 @@
 
     <test name="Ebay Home">
         <classes>
-            <!--            <class name="home.HomeDepotHomePageTest"/>-->
+<!--        <class name="testEbay.TestEbayHomePage"/>-->
+<!--            <class name="testEbay.TestSignIn"/>-->
+            <class name="testDatabase.TestSearch"/>
         </classes>
     </test>
 

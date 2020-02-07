@@ -4,7 +4,6 @@ import base.CommonAPI;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import search.AmazonSearchPage;
 
 
 public class AmazonRegistrationTest extends CommonAPI {
