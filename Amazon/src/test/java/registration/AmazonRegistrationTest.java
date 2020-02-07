@@ -2,7 +2,6 @@ package registration;
 
 import base.CommonAPI;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 
@@ -12,32 +11,18 @@ public class AmazonRegistrationTest extends CommonAPI {
     "Passwords must match" when different passwords are entered during Sign Up.
      */
     @Test
-    public void createAccountFailWithPasswordMisMatch() {
+    public void testCreateAccountFailWithPasswordMisMatch() {
         AmazonRegistrationPage amazonRegistrationPage = PageFactory.initElements(driver, AmazonRegistrationPage.class);
-        amazonRegistrationPage.helloSignIn.click();
-        amazonRegistrationPage.clickOnCreateYourAmazonAccount();
-        amazonRegistrationPage.enterCreateAccountName();
-        amazonRegistrationPage.enterCreateAccountEmail();
-        amazonRegistrationPage.enterCreateAccountPassword();
-        amazonRegistrationPage.enterCreateAccountReEnterUnmatchedPassword();
-        amazonRegistrationPage.clickOnCreateYourAmazonAccountFinal();
-        Assert.assertEquals(amazonRegistrationPage.getAlertPasswordMustMatchIcon.isDisplayed(), true);
+        amazonRegistrationPage.createAccountFailWithPasswordMisMatch();
     }
 
     /* To register, valid password must be used. This negative test tests the error message
 "Passwords must match" when different passwords are entered during Sign Up.
  */
     @Test
-    public void createAccountFailWithInvalidEmail() {
+    public void testCreateAccountFailWithInvalidEmail() {
         AmazonRegistrationPage amazonRegistrationPage = PageFactory.initElements(driver, AmazonRegistrationPage.class);
-        amazonRegistrationPage.helloSignIn.click();
-        amazonRegistrationPage.clickOnCreateYourAmazonAccount();
-        amazonRegistrationPage.enterCreateAccountName();
-        amazonRegistrationPage.enterCreateAccountInvalidEmail();
-        amazonRegistrationPage.enterCreateAccountPassword();
-        amazonRegistrationPage.enterCreateAccountReEnterPassword();
-        amazonRegistrationPage.clickOnCreateYourAmazonAccountFinal();
-        Assert.assertEquals(amazonRegistrationPage.getAlertPasswordMustMatchIcon.isDisplayed(), true);
+        amazonRegistrationPage.createAccountFailWithInvalidEmail();
     }
 
 }
