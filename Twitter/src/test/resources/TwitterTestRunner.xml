@@ -13,7 +13,9 @@
 
     <test name = "Twitter Home">
         <classes>
-                        <class name="home.TwitterHomeTest"/>
+<!--            <class name="home.TwitterHomeTest"/>-->
+<!--            <class name="user.TwitterUserTest"/>-->
+            <class name="search.TwitterSearchTest"></class>
         </classes>
     </test>
 

@@ -1,11 +1,18 @@
-package home;
+package search;
 
 import base.CommonAPI;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class TwitterHome extends CommonAPI {
+public class TwitterSearch extends CommonAPI {
 
+    @FindBy(css = "input[enterkeyhint='search']")
+     static WebElement searchField;
+
+    public static void searchFor() {
+        searchField.sendKeys("cookies");
+        searchField.submit();
+    }
     @FindBy(name = "session[username_or_email]")
     public WebElement emailField;
 
@@ -20,5 +27,9 @@ public class TwitterHome extends CommonAPI {
         passwordField.sendKeys(password);
         loginButton.click();
     }
+
+
+
+
 
 }
