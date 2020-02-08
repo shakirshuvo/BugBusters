@@ -16,7 +16,7 @@
 <!--        <class name="testEbay.TestEbayHomePage"/>-->
 <!--            <class name="testEbay.TestSignIn"/>-->
 <!--            <class name="testDatabase.TestSearch"/>-->
-            <class name="testEbay.TestRegistration"/>
+<!--            <class name="testEbay.TestRegistration"/>-->
         </classes>
     </test>
 

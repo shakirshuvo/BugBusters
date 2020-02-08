@@ -17,7 +17,6 @@ public class AmazonSearchPageTest extends CommonAPI {
     @Test
     public void testSearchItemsHardcoded() {
         AmazonSearchPage amazonSearchPage = PageFactory.initElements(driver, AmazonSearchPage.class);
-        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         amazonSearchPage.clearTypeAndClickOnSearch();
     }
 
@@ -25,7 +24,6 @@ public class AmazonSearchPageTest extends CommonAPI {
     @Test
     public void testSearchItemsIphone() {
         AmazonSearchPage amazonSearchPage = PageFactory.initElements(driver, AmazonSearchPage.class);
-        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         amazonSearchPage.doProductSearch();
     }
 
@@ -33,14 +31,12 @@ public class AmazonSearchPageTest extends CommonAPI {
     @Test
     public void testSearchItems() throws Exception, IOException, SQLException, ClassNotFoundException {
         AmazonSearchPage searchPage = PageFactory.initElements(driver, AmazonSearchPage.class);
-        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         searchPage.searchItemsAndSubmitButton();
     }
 
     // Tests objects under 'All' search dropdown.
     @Test
     public void allDropDown() {
-        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         List<WebElement> element = getListOfWebElementsById("searchDropdownBox");
         List<String> listOfText = getListOfString(element);
         for (String st : listOfText) {

@@ -3,6 +3,7 @@ package cart;
 import base.CommonAPI;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
+import reporting.TestLogger;
 
 public class AmazonCartPageTest extends CommonAPI {
 
@@ -42,4 +43,5 @@ public class AmazonCartPageTest extends CommonAPI {
         AmazonCartPage amazonCartPage = PageFactory.initElements(driver, AmazonCartPage.class);
         amazonCartPage.getQtyDropdown();
     }
+
 }

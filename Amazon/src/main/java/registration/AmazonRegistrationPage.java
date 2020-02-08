@@ -50,9 +50,6 @@ public class AmazonRegistrationPage {
     @FindBy(xpath = "//*[@id=\"auth-passwordCheck-missing-alert\"]/div/div")
     public WebElement typeYourPasswordAgainAlert;
 
-    //    public static WebElement getHelloSignIn () {
-//        return helloSignIn;
-//    }
     public static WebElement getCreateYourAmazonAccount() {
         return createYourAmazonAccount;
     }
@@ -77,51 +74,69 @@ public class AmazonRegistrationPage {
         return createYourAmazonAccountFinal;
     }
 
-    //
-//    public void clickOnHelloSignIn() {
-//        getHelloSignIn().click();
-//    }
     public void clickOnCreateYourAmazonAccount() {
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
         getCreateYourAmazonAccount().click();
     }
 
     public void enterCreateAccountName() {
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
         getCreateAccountName().sendKeys("John Doe");
     }
 
     public void enterCreateAccountEmail() {
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
         getCreateAccountEmail().sendKeys("john.doe2sf8@gmail.com");
     }
 
     public void enterCreateAccountInvalidEmail() {
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
         getCreateAccountEmail().sendKeys("john.doe2sf8@");
     }
 
     public void enterCreateAccountPassword() {
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
         getCreateAccountPassword().sendKeys("BugBusters");
     }
 
     public void enterCreateAccountPassword5Char() {
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
         getCreateAccountPassword().sendKeys("BugBu");
     }
 
     public void enterCreateAccountReEnterPassword() {
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
         getCreateAccountReEnterPassword().sendKeys("BugBusters");
     }
 
     public void enterCreateAccountReEnterUnmatchedPassword() {
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
         getCreateAccountReEnterPassword().sendKeys("BugBoomers");
     }
 
     public void enterCreateAccountReEnterPassword5Char() {
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
         getCreateAccountReEnterPassword().sendKeys("BugBu");
     }
 
     public void clickOnCreateYourAmazonAccountFinal() {
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
         getCreateYourAmazonAccountFinal().click();
     }
 
     public void goToCreateYourAccountPage() {
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
         helloSignIn.click();
         clickOnCreateYourAmazonAccount();
     }
