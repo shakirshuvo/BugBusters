@@ -26,16 +26,15 @@ public class AmazonLoginPageTest extends CommonAPI {
         TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
         }.getClass().getEnclosingMethod().getName()));
         amazonLoginPage.signInWithShakirJahangir83();
-//        Assert.assertEquals(amazonLoginPage.displayHelloShakir(), true);
-        Assert.assertEquals(amazonLoginPage.captcha.isDisplayed(), true);
     }
 
-    // This test tests that multiple users can successfully log in.
+    // This test tests that two users can successfully log in.
     @DataProvider(name = "validLogins")
     public static Object[][] twoLoginsCredentials() {
         return new Object[][]{{"masood.57@xhanimatedm.com", "BugBusters"},
                 {"ciara105@xhanimatedm.com", "BugBusters"}};
     }
+
     @Test(dataProvider = "validLogins")
     public void twoUsersCanLogInSuccessfully(String email, String password) {
         AmazonLoginPage amazonLoginPage = PageFactory.initElements(driver, AmazonLoginPage.class);
@@ -44,4 +43,16 @@ public class AmazonLoginPageTest extends CommonAPI {
         amazonLoginPage.signIn(email, password);
         Assert.assertEquals(amazonLoginPage.captcha.isDisplayed(), true);
     }
+
+    /* This negative test tests that user gets a particular error when attempting to sign in with
+    an invalid email address.
+     */
+    @Test
+    public void testSignInWithInvalidEmail() {
+        AmazonLoginPage amazonLoginPage = PageFactory.initElements(driver, AmazonLoginPage.class);
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
+        amazonLoginPage.signInWithInvalidEmail();
+    }
+
 }

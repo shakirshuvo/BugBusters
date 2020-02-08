@@ -20,5 +20,4 @@ public class TwitterHome extends CommonAPI {
         passwordField.sendKeys(password);
         loginButton.click();
     }
-
 }

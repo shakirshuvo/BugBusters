@@ -6,7 +6,6 @@ import org.testng.annotations.Test;
 
 public class TwitterSearchTest extends CommonAPI {
 
-
     @Test
     public static void searchFor() {
         TwitterSearch twitterSearch = PageFactory.initElements(driver, TwitterSearch.class);
@@ -16,5 +15,9 @@ public class TwitterSearchTest extends CommonAPI {
 
     }
 
-
+//    @Test
+//    public void searchMemeTest() {
+//        TwitterSearch twitterSearch = PageFactory.initElements(driver, TwitterSearch.class);
+//        twitterSearch.searchMemes();
+//    }
 }

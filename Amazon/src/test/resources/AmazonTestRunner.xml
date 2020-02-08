@@ -13,9 +13,10 @@
 
     <test name="Amazon Home">
         <classes>
-<!--            <class name="home.AmazonHomePageTest"/>-->
+            <class name="home.AmazonHomePageTest"/>
+<!--            <class name="cart.AmazonCartPageTest"/>-->
 <!--            <class name="search.AmazonSearchPageTest"/>-->
-            <class name="login.AmazonLoginPageTest"/>
+<!--            <class name="login.AmazonLoginPageTest"/>-->
 <!--            <class name="registration.AmazonRegistrationTest"/>-->
         </classes>
     </test>

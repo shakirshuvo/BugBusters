@@ -33,5 +33,4 @@ public class TwitterHomeTest extends CommonAPI {
         String actualUrl = driver.getCurrentUrl();
         Assert.assertEquals(expectedUrl, actualUrl);
     }
-
 }

@@ -28,8 +28,4 @@ public class TwitterSearch extends CommonAPI {
         loginButton.click();
     }
 
-
-
-
-
 }
