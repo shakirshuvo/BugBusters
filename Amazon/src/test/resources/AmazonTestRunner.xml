@@ -7,17 +7,17 @@
     <parameter name="cloudEnvName" value="browserstack"/>
     <parameter name="os" value="Windows"/>
     <parameter name="os_version" value="10"/>
-    <parameter name="browserName" value="chrome-options"/>
+    <parameter name="browserName" value="chrome"/>
     <parameter name="browserVersion" value="78.0"/>
     <parameter name="url" value="https://www.amazon.com"/>
 
     <test name="Amazon Home">
         <classes>
-<!--            <class name="home.AmazonHomePageTest"/>-->
-<!--            <class name="cart.AmazonCartPageTest"/>-->
-<!--            <class name="search.AmazonSearchPageTest"/>-->
-<!--            <class name="login.AmazonLoginPageTest"/>-->
-<!--            <class name="registration.AmazonRegistrationTest"/>-->
+            <class name="home.AmazonHomePageTest"/>
+            <class name="cart.AmazonCartPageTest"/>
+            <class name="search.AmazonSearchPageTest"/>
+            <class name="login.AmazonLoginPageTest"/>
+            <class name="registration.AmazonRegistrationTest"/>
         </classes>
     </test>
 
