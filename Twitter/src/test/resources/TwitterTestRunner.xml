@@ -13,7 +13,6 @@
 
     <test name = "Twitter Home">
         <classes>
-<!--                        <class name="home.TwitterHomeTest"/>-->
             <class name="search.TwitterSearchTest"></class>
         </classes>
     </test>
