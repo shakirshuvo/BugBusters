@@ -117,6 +117,8 @@ public class AmazonLoginPage extends CommonAPI {
     }
 
     public void signIn(String email, String password) {
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
         clickOnSignInPopUpButton();
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         this.signInEmailAddress.sendKeys(email);
@@ -126,6 +128,8 @@ public class AmazonLoginPage extends CommonAPI {
     }
 
     public void signInWithShakirJahangir83(){
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
         signIn("shakir.jahangir83@gmail.com", "BugBusters");
         Assert.assertEquals(captcha.isDisplayed(), true);
     }

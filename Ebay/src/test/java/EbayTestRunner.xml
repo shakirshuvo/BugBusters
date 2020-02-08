@@ -17,9 +17,6 @@
 <!--            <class name="testEbay.TestSignIn"/>-->
 <!--            <class name="testDatabase.TestSearch"/>-->
 <!--            <class name="testEbay.TestRegistration"/>-->
-<!--            <class name="testEbay.TestValidateHomepage"/>-->
-
-
         </classes>
     </test>
 
