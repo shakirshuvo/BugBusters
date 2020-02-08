@@ -109,6 +109,42 @@ public class AmazonHomePage extends CommonAPI {
     @FindBy(xpath = "//span[text()='TRY']")
     public WebElement currencyTurkishConfirmation;
 
+    @FindBy(xpath = "//a[text()='Amazon Advertising']")
+    public WebElement amazonAdvertizing;
+
+    @FindBy(xpath = "//a[text()='Amazon Drive']")
+    public WebElement amazonDriveLink;
+
+    @FindBy(xpath = "//h1[text()='Amazon Drive']")
+    public WebElement amazonDrive;
+
+    @FindBy(xpath = "//*[@id=\"navFooter\"]/div[4]/table/tbody/tr[1]/td[7]/a")
+    public WebElement sixPM;
+
+    @FindBy(xpath = "//a[text()='AbeBooks']")
+    public WebElement abeBooks;
+
+    @FindBy(xpath = "//a[text()='ACX ']")
+    public WebElement acx;
+
+    @FindBy(xpath = "//a[text()='Alexa']")
+    public WebElement alexa;
+
+    @FindBy(xpath = "//*[@id=\"navFooter\"]/div[4]/table/tbody/tr[3]/td[3]/a")
+    public WebElement sellOnAmazon;
+
+    @FindBy(xpath = "//span[text()=' Your Business']")
+    public WebElement amazonBusiness;
+
+    @FindBy(xpath = "//a[text()='AmazonGlobal']")
+    public WebElement amazonGlobal;
+
+    @FindBy(xpath = "//*[@id=\"navFooter\"]/div[4]/table/tbody/tr[3]/td[9]/a")
+    public WebElement amazonHomeServices;
+
+    @FindBy(xpath = "//a[text()='Amazon Ignite']")
+    public WebElement amazonIgnite;
+
     public static WebElement getMusic() {
         return music;
     }
@@ -276,5 +312,66 @@ public class AmazonHomePage extends CommonAPI {
         Assert.assertEquals(currencyTurkishConfirmation.isDisplayed(), true);
     }
 
+    public void clickOnAmazonAdvertising() {
+        amazonAdvertizing.click();
+        Assert.assertEquals(driver.getTitle(), "Amazon Advertising");
+    }
+
+    public void clickOnAmazonDrive() {
+        amazonDriveLink.click();
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        Assert.assertEquals(driver.getTitle(), "Amazon Drive");
+    }
+
+    public void displaySixPM() {
+        Assert.assertEquals(sixPM.isDisplayed(), true);
+    }
+
+    public void displayAbeBooks() {
+        Assert.assertEquals(abeBooks.isDisplayed(), true);
+    }
+
+    public void displayACX() {
+        Assert.assertEquals(acx.isDisplayed(), true);
+    }
+
+    public void displayAlexa() {
+        Assert.assertEquals(alexa.isDisplayed(), true);
+    }
+
+    public void displaySellOnAmazon() {
+        Assert.assertEquals(sellOnAmazon.isDisplayed(), true);
+    }
+
+    public void displayAmazonBusiness() {
+        Assert.assertEquals(amazonBusiness.isDisplayed(), true);
+    }
+
+    public void getAmazonBusinessTitle() {
+        amazonBusiness.click();
+        Assert.assertEquals(driver.getTitle(), "Amazon Business");
+    }
+
+    public void displayAmazonGlobal() {
+        Assert.assertEquals(amazonGlobal.isDisplayed(), true);
+    }
+
+    public void getAmazonGlobalTitle() {
+        amazonGlobal.click();
+        Assert.assertEquals(driver.getTitle(), "Amazon International shopping and shipping made easy");
+    }
+
+    public void displayAmazonHomeServices() {
+        Assert.assertEquals(amazonHomeServices.isDisplayed(), true);
+    }
+
+    public void getAmazonHomeServicesTitle() {
+        amazonHomeServices.click();
+        Assert.assertEquals(driver.getTitle(), "Amazon.com: Home & Business Services");
+    }
+
+    public void displayAmazonIgnite() {
+        Assert.assertEquals(amazonIgnite.isDisplayed(), true);
+    }
 
 }

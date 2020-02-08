@@ -98,4 +98,88 @@ public class AmazonHomePageTest extends CommonAPI {
         amazonHomePage.changeCurrencyToTurkishLira();
     }
 
+    @Test
+    public void testClickOnAmazonAdvertising() {
+        AmazonHomePage amazonHomePage = PageFactory.initElements(driver, AmazonHomePage.class);
+        amazonHomePage.clickOnAmazonAdvertising();
+    }
+
+    @Test
+    public void testClickOnAmazonDrive() {
+        AmazonHomePage amazonHomePage = PageFactory.initElements(driver, AmazonHomePage.class);
+        amazonHomePage.clickOnAmazonDrive();
+    }
+
+    @Test
+    public void testDisplaySixPM(){
+        AmazonHomePage amazonHomePage = PageFactory.initElements(driver, AmazonHomePage.class);
+        amazonHomePage.displaySixPM();
+    }
+
+    @Test
+    public void testDisplayAbeBooks() {
+        AmazonHomePage amazonHomePage = PageFactory.initElements(driver, AmazonHomePage.class);
+        amazonHomePage.displayAbeBooks();
+    }
+
+    @Test
+    public void testDisplayACX() {
+        AmazonHomePage amazonHomePage = PageFactory.initElements(driver, AmazonHomePage.class);
+        amazonHomePage.displayACX();
+    }
+
+    @Test
+    public void testDisplayAlexa() {
+        AmazonHomePage amazonHomePage = PageFactory.initElements(driver, AmazonHomePage.class);
+        amazonHomePage.displayAlexa();
+    }
+
+    @Test
+    public void testDisplaySellOnAmazon() {
+        AmazonHomePage amazonHomePage = PageFactory.initElements(driver, AmazonHomePage.class);
+        amazonHomePage.displaySellOnAmazon();
+    }
+
+    @Test
+    public void testDisplayAmazonBusiness() {
+        AmazonHomePage amazonHomePage = PageFactory.initElements(driver, AmazonHomePage.class);
+        amazonHomePage.displayAmazonBusiness();
+    }
+
+    @Test
+    public void testGetAmazonBusinessTitle() {
+        AmazonHomePage amazonHomePage = PageFactory.initElements(driver, AmazonHomePage.class);
+        amazonHomePage.getAmazonBusinessTitle();
+    }
+
+    @Test
+    public void testDisplayAmazonGlobal() {
+        AmazonHomePage amazonHomePage = PageFactory.initElements(driver, AmazonHomePage.class);
+        amazonHomePage.displayAmazonGlobal();
+    }
+
+    @Test
+    public void testAmazonGlobalTitle() {
+        AmazonHomePage amazonHomePage = PageFactory.initElements(driver, AmazonHomePage.class);
+        amazonHomePage.getAmazonGlobalTitle();
+    }
+
+    @Test
+    public void testDisplayAmazonHomeServices() {
+        AmazonHomePage amazonHomePage = PageFactory.initElements(driver, AmazonHomePage.class);
+        amazonHomePage.displayAmazonHomeServices();
+    }
+
+    @Test
+    public void testAmazonHomeServicesTitle() {
+        AmazonHomePage amazonHomePage = PageFactory.initElements(driver, AmazonHomePage.class);
+        amazonHomePage.getAmazonHomeServicesTitle();
+    }
+
+    @Test
+    public void testDisplayAmazonIgnite() {
+        AmazonHomePage amazonHomePage = PageFactory.initElements(driver, AmazonHomePage.class);
+        amazonHomePage.displayAmazonIgnite();
+    }
+
 }

@@ -42,4 +42,5 @@ public class AmazonCartPageTest extends CommonAPI {
         AmazonCartPage amazonCartPage = PageFactory.initElements(driver, AmazonCartPage.class);
         amazonCartPage.getQtyDropdown();
     }
+
 }
