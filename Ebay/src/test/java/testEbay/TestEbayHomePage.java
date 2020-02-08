@@ -7,67 +7,61 @@ import pageObjM.EbayHomePage;
 
 public class TestEbayHomePage extends CommonAPI {
 
-    @Test(enabled = false)
+    @Test(enabled = true)
     public void testSearchButton() {
         EbayHomePage ebayHomePage = PageFactory.initElements (driver, EbayHomePage.class);
         ebayHomePage.validateSreachButton ();
     }
-
-    @Test(enabled = false)
+    @Test(enabled = true)
     public void testSearchItem() {
         EbayHomePage ebayHomePage = PageFactory.initElements (driver, EbayHomePage.class);
         ebayHomePage.validateSearchItem ();
     }
-
-    @Test(enabled = false)
+    @Test(enabled = true)
     public void testSearchBar() {
         EbayHomePage ebayHomePage = PageFactory.initElements (driver, EbayHomePage.class);
         ebayHomePage.validateSearchBar ();
     }
-
-    @Test(enabled = false)
+    @Test(enabled = true)
     public void testMotorsButton() {
         EbayHomePage ebayHomePage = PageFactory.initElements (driver, EbayHomePage.class);
         ebayHomePage.validateMotorsOptionDisplayed ();
     }
-
-    @Test(enabled = false)
+    @Test(enabled = true)
     public void clickOnMotorsButton() {
         EbayHomePage ebayHomePage = PageFactory.initElements (driver, EbayHomePage.class);
         ebayHomePage.validateMotorsOptionClickAble ();
     }
-
-    @Test(enabled = false)
+    @Test(enabled = true)
     public void testOnFashionButton() {
         EbayHomePage ebayHomePage = PageFactory.initElements (driver, EbayHomePage.class);
         ebayHomePage.validateFashionOptionDisplayed ();
     }
 
-    @Test(enabled = false)
+    @Test(enabled = true)
     public void clickOnFashionButton() {
         EbayHomePage ebayHomePage = PageFactory.initElements (driver, EbayHomePage.class);
         ebayHomePage.validatedFashionOptionClickable ();
     }
-
-    @Test(enabled = false)
+    @Test(enabled = true)
     public void testOnElectronicsButton() {
         EbayHomePage ebayHomePage = PageFactory.initElements (driver, EbayHomePage.class);
         ebayHomePage.validateElectronicsOptionDisplayed ();
     }
 
-    @Test(enabled = false)
+    @Test(enabled = true)
     public void clickOnElectronicsButton() {
         EbayHomePage ebayHomePage = PageFactory.initElements (driver, EbayHomePage.class);
         ebayHomePage.validateElectronicsOptionClikable ();
     }
 
-    @Test(enabled = false)
+    @Test(enabled = true)
     public void testOnFindPartsAndAccessories() {
         EbayHomePage ebayHomePage = PageFactory.initElements (driver, EbayHomePage.class);
         ebayHomePage.validateFindPartsAndAccessoriesButtonDisplayed ();
     }
 
-    @Test(enabled = false)
+    @Test(enabled = true)
     public void clickOnFindPartsAndAccessories() {
         EbayHomePage ebayHomePage = PageFactory.initElements (driver, EbayHomePage.class);
         ebayHomePage.validateFindPartsAndAccessoriesButtonClickable ();
@@ -85,7 +79,7 @@ public class TestEbayHomePage extends CommonAPI {
         ebayHomePage.validateShopByCategoryButtonClickable ();
     }
 
-    @Test(enabled = false)
+    @Test(enabled = true)
     public void testOnExtraCouponOnTopButton() {
         EbayHomePage ebayHomePage = PageFactory.initElements (driver, EbayHomePage.class);
         ebayHomePage.validateExtraCouponOnBrandsDisplayed ();

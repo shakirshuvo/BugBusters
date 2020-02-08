@@ -31,6 +31,7 @@ public class EbayHomePage extends CommonAPI {
     @FindBy(linkText = "Motors")
     public static WebElement Motors;
 
+
     public void validateMotorsOptionDisplayed() {
         Assert.assertEquals(Motors.isDisplayed(), true);
     }
@@ -89,4 +90,5 @@ public class EbayHomePage extends CommonAPI {
         ShopByCategory.click ();
         Assert.assertEquals (ShopByCategory.isDisplayed (), true);
     }
+
 }
