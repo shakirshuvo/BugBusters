@@ -6,10 +6,10 @@ import org.openqa.selenium.support.FindBy;
 
 public class SignIn extends CommonAPI {
 
-    @FindBy(xpath = "//a[contains(text(),'Sign in')]")
+    @FindBy(css = "span#gh-ug > a")
     public static WebElement signIn;
 
-    @FindBy(css = "input#userid")
+    @FindBy(css = "span#gh-ug > a")
     public static WebElement typeUserName;
 
     @FindBy(css = "input#pass")
