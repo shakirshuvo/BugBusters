@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import reporting.TestLogger;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -14,27 +15,26 @@ public class AmazonSearchPageTest extends CommonAPI {
 
     // Tests hardcoded search item
     @Test
-    public void searchItemsHardcoded() {
+    public void testSearchItemsHardcoded() {
         AmazonSearchPage amazonSearchPage = PageFactory.initElements(driver, AmazonSearchPage.class);
         amazonSearchPage.clearTypeAndClickOnSearch();
-        Assert.assertNotNull(amazonSearchPage.getItems(), "watch");
-        Assert.assertNotNull(amazonSearchPage.getItems(), "Rage Against The Machine");
     }
 
+    // Tests single item (iPhone) hardcoded.
     @Test
-    public void searchItemsIphone() {
+    public void testSearchItemsIphone() {
         AmazonSearchPage amazonSearchPage = PageFactory.initElements(driver, AmazonSearchPage.class);
         amazonSearchPage.doProductSearch();
-        Assert.assertNotNull("iPhone");
     }
 
     // Tests data from MySQL database
     @Test
-    public void searchItems() throws Exception, IOException, SQLException, ClassNotFoundException {
+    public void testSearchItems() throws Exception, IOException, SQLException, ClassNotFoundException {
         AmazonSearchPage searchPage = PageFactory.initElements(driver, AmazonSearchPage.class);
         searchPage.searchItemsAndSubmitButton();
     }
 
+    // Tests objects under 'All' search dropdown.
     @Test
     public void allDropDown() {
         List<WebElement> element = getListOfWebElementsById("searchDropdownBox");

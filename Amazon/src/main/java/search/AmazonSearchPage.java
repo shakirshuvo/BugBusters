@@ -5,6 +5,7 @@ import datasuply.DataSource;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.testng.Assert;
 import reporting.TestLogger;
 
 import java.io.IOException;
@@ -36,27 +37,39 @@ public class AmazonSearchPage extends CommonAPI {
     }
 
     public void clearInputBox() {
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
         getSearchInputWebElement().clear();
     }
 
     public void typeItemName(String value) {
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()+ ": "+ value));
         getSearchInputWebElement().sendKeys(value);
     }
 
     public void clickOnSearch() {
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
         getSubmitWebElement().click();
     }
 
     public void clearTypeAndClickOnSearch() {
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
         List<String> list = getItems();
         for (int i = 0; i < list.size(); i++) {
             clearInputBox();
             typeItemName(list.get(i));
             clickOnSearch();
         }
+        Assert.assertNotNull(getItems(), "watch");
+        Assert.assertNotNull(getItems(), "Rage Against The Machine");
     }
 
     public void searchItemsAndSubmitButton() throws Exception, IOException, SQLException, ClassNotFoundException {
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
         List<String> list = DataSource.getItemsListFromDB();
         for (int i = 0; i < list.size(); i++) {
             typeItemName(list.get(i));
@@ -90,6 +103,7 @@ public class AmazonSearchPage extends CommonAPI {
         }.getClass().getEnclosingMethod().getName()));
         typeItemName("iPhone");
         clickOnSearch();
+        Assert.assertNotNull("iPhone");
     }
 
 }

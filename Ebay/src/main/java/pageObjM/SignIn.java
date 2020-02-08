@@ -47,3 +47,5 @@ public class SignIn extends CommonAPI {
         getClickSignIn ().click ();
     }
 }
+
+//code
