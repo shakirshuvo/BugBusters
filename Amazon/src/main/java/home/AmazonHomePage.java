@@ -193,6 +193,45 @@ public class AmazonHomePage extends CommonAPI {
     @FindBy(xpath = "//a[text()='Shopbop']")
     public WebElement shopbop;
 
+    @FindBy(xpath = "//a[text()='Woot!']")
+    public WebElement woot;
+
+    @FindBy(xpath = "//a[text()='Zappos']")
+    public WebElement zappos;
+
+    @FindBy(xpath = "//a[text()='Ring']")
+    public WebElement ring;
+
+    @FindBy(xpath = "//a[text()='eero WiFi']")
+    public WebElement eeroWifi;
+
+    @FindBy(xpath = "//a[text()='Neighbors App ']")
+    public WebElement neighborsApp;
+
+    @FindBy(xpath = "//a[text()='Subscribe with Amazon']")
+    public WebElement subscribeWithAmazon;
+
+    @FindBy(xpath = "//a[text()='PillPack']")
+    public WebElement pillPack;
+
+    @FindBy(xpath = "//a[text()='Amazon Second Chance']")
+    public WebElement amazonSecondChance;
+
+    @FindBy(xpath = "//a[text()='Conditions of Use']")
+    public WebElement conditionsOfUse;
+
+    @FindBy(xpath = "//a[text()='Privacy Notice']")
+    public WebElement privacyNotice;
+
+    @FindBy(xpath = "//a[text()='Interest-Based Ads']")
+    public WebElement interestBasedAds;
+
+    @FindBy(xpath = "//a[text()='Careers']")
+    public WebElement careers;
+
+    @FindBy(xpath = "//a[text()='Blog']")
+    public WebElement blog;
+
     public static WebElement getMusic() {
         return music;
     }
@@ -495,5 +534,89 @@ public class AmazonHomePage extends CommonAPI {
     public void displayShopbop() {
         Assert.assertEquals(shopbop.isDisplayed(), true);
     }
+
+    public void displayWoot() {
+        Assert.assertEquals(woot.isDisplayed(), true);
+    }
+
+    public void displayZappos() {
+        Assert.assertEquals(zappos.isDisplayed(), true);
+    }
+
+    public void displayRing() {
+        Assert.assertEquals(ring.isDisplayed(), true);
+    }
+
+    public void displayEeroWifi() {
+        Assert.assertEquals(eeroWifi.isDisplayed(), true);
+    }
+
+    public void displayNeighborApp() {
+        Assert.assertEquals(neighborsApp.isDisplayed(), true);
+    }
+
+    public void displaySubscribeWithAmazon() {
+        Assert.assertEquals(subscribeWithAmazon.isDisplayed(), true);
+    }
+
+    public void getSubscribeWithAmazonTitle() {
+        subscribeWithAmazon.click();
+        Assert.assertEquals(driver.getTitle(), "Amazon Subscription Boxes – Choose from over 200 boxes");
+    }
+
+    public void displayPillPack() {
+        Assert.assertEquals(pillPack.isDisplayed(), true);
+    }
+
+    public void displayAmazonSecondChance() {
+        Assert.assertEquals(amazonSecondChance.isDisplayed(), true);
+    }
+
+    public void getAmazonSecondChanceTitle() {
+        amazonSecondChance.click();
+        Assert.assertEquals(driver.getTitle(), "Amazon Second Chance");
+    }
+
+    public void displayConditionsOfUse() {
+        Assert.assertEquals(conditionsOfUse.isDisplayed(), true);
+    }
+
+    public void getConditionsOfUseTitle() {
+        conditionsOfUse.click();
+        Assert.assertEquals(driver.getTitle(), "Amazon.com Help: Conditions of Use");
+    }
+
+    public void displayPrivacyNotice() {
+        Assert.assertEquals(privacyNotice.isDisplayed(), true);
+    }
+
+    public void getPrivacyNoticeTitle() {
+        privacyNotice.click();
+        Assert.assertEquals(driver.getTitle(), "Amazon.com Help: Amazon.com Privacy Notice");
+    }
+
+    public void displayInterestBasedAds() {
+        Assert.assertEquals(interestBasedAds.isDisplayed(), true);
+    }
+
+    public void getInterestBasedAdsTitle() {
+        interestBasedAds.click();
+        Assert.assertEquals(driver.getTitle(), "Amazon.com Help");
+    }
+
+    public void displayCareers() {
+        Assert.assertEquals(careers.isDisplayed(), true);
+    }
+
+    public void getCareersTitle() {
+        careers.click();
+        Assert.assertEquals(driver.getTitle(), "Amazon.jobs: Help us build Earth’s most customer-centric company.");
+    }
+
+    public void displayBlog() {
+        Assert.assertEquals(blog.isDisplayed(), true);
+    }
+
+
 
 }
