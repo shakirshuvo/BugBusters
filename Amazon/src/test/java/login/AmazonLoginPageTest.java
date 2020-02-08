@@ -14,8 +14,6 @@ public class AmazonLoginPageTest extends CommonAPI {
     @Test
     public void testAmazonLogInPageTitle() {
         AmazonLoginPage amazonLoginPage = PageFactory.initElements(driver, AmazonLoginPage.class);
-        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
-        }.getClass().getEnclosingMethod().getName()));
         amazonLoginPage.getAmazonSignInPageTitle();
     }
 
@@ -23,8 +21,6 @@ public class AmazonLoginPageTest extends CommonAPI {
     @Test
     public void amazonLogIn() throws InterruptedException {
         AmazonLoginPage amazonLoginPage = PageFactory.initElements(driver, AmazonLoginPage.class);
-        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
-        }.getClass().getEnclosingMethod().getName()));
         amazonLoginPage.signInWithShakirJahangir83();
     }
 
@@ -50,8 +46,6 @@ public class AmazonLoginPageTest extends CommonAPI {
     @Test
     public void testSignInWithInvalidEmail() {
         AmazonLoginPage amazonLoginPage = PageFactory.initElements(driver, AmazonLoginPage.class);
-        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
-        }.getClass().getEnclosingMethod().getName()));
         amazonLoginPage.signInWithInvalidEmail();
     }
 
