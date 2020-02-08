@@ -4,6 +4,7 @@ import base.CommonAPI;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import reporting.TestLogger;
 
@@ -81,6 +82,32 @@ public class AmazonHomePage extends CommonAPI {
     @FindBy(xpath = "//*[@id=\"navFooter\"]/div[1]/div/div[7]/ul/li[1]/a")
     public WebElement yourAccount;
 
+    @FindBy(xpath = "//*[@id=\"icp-touch-link-country\"]/span[2]")
+    public WebElement country;
+
+    @FindBy(className = "a-dropdown-prompt")
+    public WebElement countryDropDown;
+
+    @FindBy(xpath = "//*[@id=\"icp-selected-country_2\"]/div/div/div[2]/span")
+    public WebElement canada;
+
+    @FindBy(xpath = "//*[@id=\"a-popover-1\"]/div/div[2]/span[2]/span/span/input")
+    public WebElement submitCanada;
+
+    @FindBy(xpath = "//*[@id=\"icp-touch-link-cop\"]")
+    public WebElement currency;
+
+    @FindBy(id = "a-autoid-0-announce")
+    public WebElement currencyDropdown;
+
+    @FindBy(id = "icp-sc-dropdown_62")
+    public WebElement turkishLira;
+
+    @FindBy(xpath = "//*[@id=\"icp-btn-save\"]/span/input")
+    public WebElement submitCurrencyChange;
+
+    @FindBy(xpath = "//span[text()='TRY']")
+    public WebElement currencyTurkishConfirmation;
 
     public static WebElement getMusic() {
         return music;
@@ -134,12 +161,22 @@ public class AmazonHomePage extends CommonAPI {
         return getHelpText().isDisplayed();
     }
 
+    public void getAmaonHomePageTitle() {
+
+        AmazonHomePage amazonHomePage = PageFactory.initElements(driver, AmazonHomePage.class);
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
+        Assert.assertEquals(driver.getTitle(), "Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs & more");
+    }
+
     public void clickOnTodaysDealsTab() {
         getTodaysDealsWebElement().click();
+        Assert.assertEquals(dealsAndPromotionsText.isDisplayed(), true);
     }
 
     public void clickOnHelpTab() {
         getHelpWebElement().click();
+        Assert.assertEquals(checkIfGetHelpText(), true);
     }
 
     public void clickOnRegistryTab() {
@@ -164,14 +201,17 @@ public class AmazonHomePage extends CommonAPI {
 
     public void clickOnReturnsAndOrderTab() {
         getReturnAndOrdersWebElement().click();
+        Assert.assertEquals(signInText.isDisplayed(), true);
     }
 
     public void clickOnCartTab() {
         getCartWebElement().click();
+        Assert.assertEquals(yourShoppingCartIsEmptyText.isDisplayed(), true);
     }
 
     public void clickMusic() {
         getMusic().click();
+        Assert.assertEquals(amazonMusicLogo.isDisplayed(), true);
     }
 
     public boolean checkIfregisterWithAmazonPic() {
@@ -213,5 +253,28 @@ public class AmazonHomePage extends CommonAPI {
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         Assert.assertEquals(driver.getTitle(), "Your Account");
     }
+
+    public void changeCountryToCanada() {
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
+        country.click();
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        countryDropDown.click();
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        canada.click();
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        Assert.assertEquals(submitCanada.isDisplayed(), true);
+    }
+
+    public void changeCurrencyToTurkishLira() {
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
+        }.getClass().getEnclosingMethod().getName()));
+        currency.click();
+        currencyDropdown.click();
+        turkishLira.click();
+        submitCurrencyChange.click();
+        Assert.assertEquals(currencyTurkishConfirmation.isDisplayed(), true);
+    }
+
 
 }
