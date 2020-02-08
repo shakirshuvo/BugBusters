@@ -145,6 +145,54 @@ public class AmazonHomePage extends CommonAPI {
     @FindBy(xpath = "//a[text()='Amazon Ignite']")
     public WebElement amazonIgnite;
 
+    @FindBy(xpath = "//a[text()='Amazon Rapids']")
+    public WebElement amazonRapid;
+
+    @FindBy(xpath = "//a[text()='Amazon Web Services']")
+    public WebElement amazonWebServices;
+
+    @FindBy(xpath = "//a[text()='Audible']")
+    public WebElement amazonAudible;
+
+    @FindBy(xpath = "//a[text()='Book Depository']")
+    public WebElement amazonBookDepository;
+
+    @FindBy(xpath = "//a[text()='Box Office Mojo']")
+    public WebElement boxOfficeMojo;
+
+    @FindBy(xpath = "//a[text()='ComiXology']")
+    public WebElement comiXology;
+
+    @FindBy(xpath = "//a[text()='CreateSpace']")
+    public WebElement createSpace;
+
+    @FindBy(xpath = "//a[text()='DPReview']")
+    public WebElement dpReview;
+
+    @FindBy(xpath = "//a[text()='East Dane']")
+    public WebElement eastDance;
+
+    @FindBy(xpath = "//a[text()='Fabric']")
+    public WebElement fabric;
+
+    @FindBy(xpath = "//a[text()='Goodreads']")
+    public WebElement goodreads;
+
+    @FindBy(xpath = "//a[text()='IMDb']")
+    public WebElement imdb;
+
+    @FindBy(xpath = "//a[text()='IMDbPro']")
+    public WebElement imdbPro;
+
+    @FindBy(xpath = "//a[text()='Kindle Direct Publishing']")
+    public WebElement kindleDirectPublishing;
+
+    @FindBy(xpath = "//a[text()='Prime Video Direct']")
+    public WebElement primeVideoDirect;
+
+    @FindBy(xpath = "//a[text()='Shopbop']")
+    public WebElement shopbop;
+
     public static WebElement getMusic() {
         return music;
     }
@@ -372,6 +420,80 @@ public class AmazonHomePage extends CommonAPI {
 
     public void displayAmazonIgnite() {
         Assert.assertEquals(amazonIgnite.isDisplayed(), true);
+    }
+
+    public void displayAmazonRapid() {
+        Assert.assertEquals(amazonRapid.isDisplayed(), true);
+    }
+
+    public void getAmazonRapidTitle() {
+        amazonRapid.click();
+        Assert.assertEquals(driver.getTitle(), "Amazon Rapids");
+    }
+
+    public void displayAmazonWebServices() {
+        Assert.assertEquals(amazonWebServices.isDisplayed(), true);
+    }
+
+    public void displayAmazonAudible() {
+        Assert.assertEquals(amazonAudible.isDisplayed(), true);
+    }
+
+    public void displayBookDepository() {
+        Assert.assertEquals(amazonBookDepository.isDisplayed(), true);
+    }
+
+    public void displayBoxOfficeMojo() {
+        Assert.assertEquals(boxOfficeMojo.isDisplayed(), true);
+    }
+
+    public void displayComiXology() {
+        Assert.assertEquals(comiXology.isDisplayed(), true);
+    }
+
+    public void displayCreateSpace() {
+        Assert.assertEquals(createSpace.isDisplayed(), true);
+    }
+
+    public void displayDPReview() {
+        Assert.assertEquals(dpReview.isDisplayed(), true);
+    }
+
+    public void displayEastDance() {
+        Assert.assertEquals(eastDance.isDisplayed(), true);
+    }
+
+    public void displayFabric() {
+        Assert.assertEquals(fabric.isDisplayed(), true);
+    }
+
+    public void displayGoodreads() {
+        Assert.assertEquals(goodreads.isDisplayed(), true);
+    }
+
+    public void displayIMDB() {
+        Assert.assertEquals(imdb.isDisplayed(), true);
+    }
+
+    public void displayIMDBpro() {
+        Assert.assertEquals(imdbPro.isDisplayed(), true);
+    }
+
+    public void displayKindleDirectPublishing() {
+        Assert.assertEquals(kindleDirectPublishing.isDisplayed(),true);
+    }
+
+    public void displayPrimeVideoDirect() {
+        Assert.assertEquals(primeVideoDirect.isDisplayed(), true);
+    }
+
+    public void getPrimeVideoDirectTitle() {
+        primeVideoDirect.click();
+        Assert.assertEquals(driver.getTitle(), "Prime Video Direct");
+    }
+
+    public void displayShopbop() {
+        Assert.assertEquals(shopbop.isDisplayed(), true);
     }
 
 }

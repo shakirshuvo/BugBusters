@@ -182,4 +182,105 @@ public class AmazonHomePageTest extends CommonAPI {
         amazonHomePage.displayAmazonIgnite();
     }
 
+    @Test
+    public void testDisplayAmazonRapid() {
+        AmazonHomePage amazonHomePage = PageFactory.initElements(driver, AmazonHomePage.class);
+        amazonHomePage.displayAmazonRapid();
+    }
+
+    @Test
+    public void testGetAmazonRapidTitle() {
+        AmazonHomePage amazonHomePage = PageFactory.initElements(driver, AmazonHomePage.class);
+        amazonHomePage.getAmazonRapidTitle();
+    }
+
+    @Test
+    public void testDisplayAmazonWebServices() {
+        AmazonHomePage amazonHomePage = PageFactory.initElements(driver, AmazonHomePage.class);
+        amazonHomePage.displayAmazonWebServices();
+    }
+
+    @Test
+    public void testDisplayBookDepository() {
+        AmazonHomePage amazonHomePage = PageFactory.initElements(driver, AmazonHomePage.class);
+        amazonHomePage.displayBookDepository();
+    }
+
+    @Test
+    public void testBoxOfficeMojo() {
+        AmazonHomePage amazonHomePage = PageFactory.initElements(driver, AmazonHomePage.class);
+        amazonHomePage.displayBoxOfficeMojo();
+    }
+
+    @Test
+    public void testDisplayComiXology() {
+        AmazonHomePage amazonHomePage = PageFactory.initElements(driver, AmazonHomePage.class);
+        amazonHomePage.displayComiXology();
+    }
+
+    @Test
+    public void testCreateSpace() {
+        AmazonHomePage amazonHomePage = PageFactory.initElements(driver, AmazonHomePage.class);
+        amazonHomePage.displayCreateSpace();
+    }
+
+    @Test
+    public void testDPReview() {
+        AmazonHomePage amazonHomePage = PageFactory.initElements(driver, AmazonHomePage.class);
+        amazonHomePage.displayDPReview();
+    }
+
+    @Test
+    public void testEastDance() {
+        AmazonHomePage amazonHomePage = PageFactory.initElements(driver, AmazonHomePage.class);
+        amazonHomePage.displayEastDance();
+    }
+
+    @Test
+    public void testDisplayFabric() {
+        AmazonHomePage amazonHomePage = PageFactory.initElements(driver, AmazonHomePage.class);
+        amazonHomePage.displayFabric();
+    }
+
+    @Test
+    public void testDisplayGoodreads() {
+        AmazonHomePage amazonHomePage = PageFactory.initElements(driver, AmazonHomePage.class);
+        amazonHomePage.displayGoodreads();
+    }
+
+    @Test
+    public void testDisplayIMDB() {
+        AmazonHomePage amazonHomePage = PageFactory.initElements(driver, AmazonHomePage.class);
+        amazonHomePage.displayIMDB();
+    }
+
+    @Test
+    public void testDisplayIMDBpro() {
+        AmazonHomePage amazonHomePage = PageFactory.initElements(driver, AmazonHomePage.class);
+        amazonHomePage.displayIMDBpro();
+    }
+
+    @Test
+    public void testDisplayKindleDirectPublishing() {
+        AmazonHomePage amazonHomePage = PageFactory.initElements(driver, AmazonHomePage.class);
+        amazonHomePage.displayKindleDirectPublishing();
+    }
+
+    @Test
+    public void testDisplayPrimeVideoDirect() {
+        AmazonHomePage amazonHomePage = PageFactory.initElements(driver, AmazonHomePage.class);
+        amazonHomePage.displayPrimeVideoDirect();
+    }
+
+    @Test
+    public void testGetPrimeVideoDirectTitle() {
+        AmazonHomePage amazonHomePage = PageFactory.initElements(driver, AmazonHomePage.class);
+        amazonHomePage.getPrimeVideoDirectTitle();
+    }
+
+    @Test
+    public void testDisplayShopbop() {
+        AmazonHomePage amazonHomePage = PageFactory.initElements(driver, AmazonHomePage.class);
+        amazonHomePage.displayShopbop();
+    }
 }
