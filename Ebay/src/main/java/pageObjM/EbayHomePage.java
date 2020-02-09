@@ -90,7 +90,6 @@ public class EbayHomePage extends CommonAPI {
         ShopByCategory.click ();
         Assert.assertEquals (ShopByCategory.isDisplayed (), true);
     }
-
     @FindBy(linkText = "Collectibles & Art")
     public static WebElement CollectiblesAndArt;
 
@@ -112,7 +111,6 @@ public class EbayHomePage extends CommonAPI {
         HomeAndGarden.click ();
         Assert.assertEquals (HomeAndGarden.isDisplayed (),true);
     }
-
     @FindBy(linkText = "Sporting Goods")
     public static WebElement SportingGoods;
 
@@ -123,7 +121,6 @@ public class EbayHomePage extends CommonAPI {
         SportingGoods.click ();
         Assert.assertEquals (SportingGoods.isDisplayed (),true);
     }
-
     @FindBy(linkText = "Toys")
     public static WebElement toys;
 
@@ -133,6 +130,18 @@ public class EbayHomePage extends CommonAPI {
     public void validateToysClickable(){
         toys.click ();
         Assert.assertEquals (toys.isDisplayed (),true);
+    }
+    //Business & Industrial
+
+    @FindBy(linkText = "Business & Industrial")
+    public static WebElement businessAndIndustrial;
+
+    public void validateBusinessAndIndustrial(){
+        Assert.assertEquals (businessAndIndustrial.isDisplayed (),true);
+    }
+    public void validateBusinessAndIndustrialClickable(){
+        businessAndIndustrial.click ();
+        Assert.assertEquals (businessAndIndustrial.isDisplayed (),true);
     }
 }
 

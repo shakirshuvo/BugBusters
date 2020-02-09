@@ -108,4 +108,10 @@ public class TestEbayHomePage extends CommonAPI {
         EbayHomePage ebayHomePage = PageFactory.initElements (driver, EbayHomePage.class);
         ebayHomePage.validateToysClickable ();
     }
+
+    @Test(enabled = true)
+    public void testBusinessAndIndustrial() {
+        EbayHomePage ebayHomePage = PageFactory.initElements (driver, EbayHomePage.class);
+        ebayHomePage.validateBusinessAndIndustrial ();
+    }
 }
