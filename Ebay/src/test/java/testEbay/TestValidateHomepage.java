@@ -3,7 +3,6 @@ package testEbay;
 import base.CommonAPI;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
-import pageObjM.SignIn;
 import pageObjM.ValidateHomePage;
 
 public class TestValidateHomepage extends CommonAPI {
@@ -28,5 +27,11 @@ public class TestValidateHomepage extends CommonAPI {
     public void checkDropDown() throws InterruptedException {
         ValidateHomePage validateHomePage =PageFactory.initElements (driver, ValidateHomePage.class);
         validateHomePage.validateTestDropDown ();
+    }
+
+    @Test
+    public void checkScrolling() throws InterruptedException {
+        ValidateHomePage validateHomePage =PageFactory.initElements (driver, ValidateHomePage.class);
+        validateHomePage.validateScrolling ();
     }
 }

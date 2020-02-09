@@ -1,14 +1,12 @@
 package pageObjM;
 
 import base.CommonAPI;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
-import org.testng.annotations.Test;
 import reporting.TestLogger;
-
-import static com.sun.tools.xjc.util.DOMUtils.getElement;
 
 public class ValidateHomePage extends CommonAPI {
 
@@ -56,6 +54,13 @@ public class ValidateHomePage extends CommonAPI {
         select.selectByIndex(4);
         sleepFor(5);
         //homePage.clickSearchButton ();
+    }
+
+    //@Test(enabled = true)
+    public void validateScrolling() throws InterruptedException {
+        JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driver;
+        javascriptExecutor.executeScript("window.scrollBy(0,2000)");
+        sleepFor(10);
     }
 }
 

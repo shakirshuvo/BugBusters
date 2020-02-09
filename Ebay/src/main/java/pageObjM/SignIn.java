@@ -6,10 +6,11 @@ import org.openqa.selenium.support.FindBy;
 
 public class SignIn extends CommonAPI {
 
-    @FindBy(css = "span#gh-ug > a")
+
+    @FindBy(linkText = "Sign in")
     public static WebElement signIn;
 
-    @FindBy(css = "span#gh-ug > a")
+    @FindBy(css = "input#userid")
     public static WebElement typeUserName;
 
     @FindBy(css = "input#pass")
@@ -28,24 +29,13 @@ public class SignIn extends CommonAPI {
     public static WebElement getPassword(){
         return typePassword;
     }
-
     public static WebElement getClickSignIn(){
         return clickSignIn;
     }
 
-    public void clickOnSignOn() {
-        getSignIn ().click ();
-    }
-    public void userName(){
-        getUserName ().sendKeys ("JohnDoe");
-    }
-    public void password(){
-        getPassword ().sendKeys ("peopleNtech");
-    }
-
-    public void clickSignInButton(){
-        getClickSignIn ().click ();
-    }
+    public void clickOnSignOn() { getSignIn ().click (); }
+    public void userName(){ getUserName ().sendKeys ("JohnDoe"); }
+    public void password(){ getPassword ().sendKeys ("peopleNtech"); }
+    public void clickSignInButton(){ getClickSignIn ().click (); }
 }
 
-//code
