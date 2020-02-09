@@ -61,4 +61,9 @@ public class TestMotors extends CommonAPI {
         Motors motors = PageFactory.initElements(driver,Motors.class);
         motors.validateTestDropDown ();
     }
+    @Test
+    public void testCommercialTruckParts() throws InterruptedException {
+        Motors motors = PageFactory.initElements(driver,Motors.class);
+        motors.clickCommercialTruckParts ();
+    }
 }

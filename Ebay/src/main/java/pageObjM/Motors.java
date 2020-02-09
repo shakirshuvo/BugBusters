@@ -58,7 +58,7 @@ public class Motors extends CommonAPI {
     public void clickMotorcycleParts() {
         motorcycleParts.click ();
     }
-    public void clinicCommercialTruckParts()
+    public void clickCommercialTruckParts()
     {
         commercialTruckParts.click ();
     }

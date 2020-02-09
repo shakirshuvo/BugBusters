@@ -13,14 +13,15 @@
 
     <test name="Ebay Home">
         <classes>
-        <class name="testEbay.TestEbayHomePage"/>
-            <class name="testEbay.TestSignIn"/>
-            <class name="testDatabase.TestSearch"/>
-            <class name="testEbay.TestRegistration"/>
-            <class name="testEbay.TestSignInPasswordSetup"/>
-            <class name="testKeywordDriven.TestKeywordDriven"/>
-            <class name="testEbay.TestValidateHomepage"/>
-            <class name="testEbay.TestMotors"/>
+<!--        <class name="testEbay.TestEbayHomePage"/>-->
+<!--            <class name="testEbay.TestSignIn"/>-->
+<!--            <class name="testDatabase.TestSearch"/>-->
+<!--            <class name="testEbay.TestRegistration"/>-->
+<!--            <class name="testEbay.TestSignInPasswordSetup"/>-->
+<!--            <class name="testKeywordDriven.TestKeywordDriven"/>-->
+<!--            <class name="testEbay.TestValidateHomepage"/>-->
+<!--            <class name="testEbay.TestMotors"/>-->
+            <class name="testEbay.TestFashion"/>
         </classes>
     </test>
 
