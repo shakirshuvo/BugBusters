@@ -84,4 +84,28 @@ public class TestEbayHomePage extends CommonAPI {
         EbayHomePage ebayHomePage = PageFactory.initElements (driver, EbayHomePage.class);
         ebayHomePage.validateExtraCouponOnBrandsDisplayed ();
     }
+
+    @Test(enabled = true)
+    public void testCollectiblesAndAr() {
+        EbayHomePage ebayHomePage = PageFactory.initElements (driver, EbayHomePage.class);
+        ebayHomePage.validateCollectiblesAndArtClickable ();
+    }
+
+    @Test(enabled = true)
+    public void testHomeAndGarden() {
+        EbayHomePage ebayHomePage = PageFactory.initElements (driver, EbayHomePage.class);
+        ebayHomePage.validateHomeAndGardenClickable ();
+    }
+
+    @Test(enabled = true)
+    public void testSportingGood() {
+        EbayHomePage ebayHomePage = PageFactory.initElements (driver, EbayHomePage.class);
+        ebayHomePage.validateHomeAndGardenClickable ();
+    }
+
+    @Test(enabled = true)
+    public void testToys() {
+        EbayHomePage ebayHomePage = PageFactory.initElements (driver, EbayHomePage.class);
+        ebayHomePage.validateToysClickable ();
+    }
 }
