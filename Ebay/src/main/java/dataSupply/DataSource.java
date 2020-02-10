@@ -13,14 +13,14 @@ public class DataSource {
 
     public static List<String> getItemsListFromDB()throws Exception, IOException, SQLException, ClassNotFoundException {
         List<String> list = new ArrayList<> ();
-        list = connectToSqlDB.readDataBase("list", "Item");
+        list = connectToSqlDB.readDataBase("List", "Item");
         return list;
     }
 
     public static void main(String[] args)throws Exception, IOException, SQLException, ClassNotFoundException {
         //insertDataIntoDB();
         ConnectToSqlDB connectToSqlDB = new ConnectToSqlDB();
-        List<String> list = connectToSqlDB.readDataBase("list","Item");
+        List<String> list = connectToSqlDB.readDataBase("List","Item");
         for(String st:list){
             System.out.println(st);
         }

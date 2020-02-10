@@ -1,6 +1,5 @@
 package search;
 
-import base.CommonAPI;
 import dataSupply.DataSource;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -67,5 +66,4 @@ public class EbaySearch {
             clearInput();
         }
     }
-
 }
