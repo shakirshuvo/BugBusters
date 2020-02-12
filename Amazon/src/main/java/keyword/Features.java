@@ -17,7 +17,7 @@ public class Features extends CommonAPI {
     AmazonSearchPage amazonSearchPage = PageFactory.initElements(driver, AmazonSearchPage.class);
 
     public void getAmazonHomePageTitle (WebDriver driver1) throws InterruptedException {
-        amazonHomePage.getAmazonHomePageTitle ();
+        amazonHomePage.getAmazonHomePageTitle();
     }
 
     public void signInWithShakirJahangir83(WebDriver driver1) throws InterruptedException {
@@ -25,7 +25,7 @@ public class Features extends CommonAPI {
     }
 
     public void doProductSearch(WebDriver driver1) throws InterruptedException {
-        amazonSearchPage.doProductSearch ();
+        amazonSearchPage.doProductSearch();
     }
 
     public void select(String featureName, WebDriver driver1) throws IOException, InterruptedException, InvalidArgumentException {
@@ -45,8 +45,8 @@ public class Features extends CommonAPI {
     }
 
     public void selectFeatures(WebDriver driver) throws IOException, InterruptedException {
-        ItemsToBeSearch searchItems = new ItemsToBeSearch();
-        String[] testSteps = ItemsToBeSearch.getDataFromExcelFileForFeaturesChoice();
+        ItemsToBeSearched itemsToBeSearched = new ItemsToBeSearched();
+        String[] testSteps = itemsToBeSearched.getDataFromExcelFile();
         for (int i = 1; i < testSteps.length; i++) {
             select(testSteps[i], driver);
         }
