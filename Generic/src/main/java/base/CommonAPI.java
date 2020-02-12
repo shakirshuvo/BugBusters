@@ -40,8 +40,14 @@ public class CommonAPI {
 
     //Browser SetUp
     public static WebDriver driver = null;
+
     public String browserstack_username = "sultansheikh1";
     public String browserstack_accesskey = "UB8vRiRn4gqwC8KqPs4L";
+
+
+    public String browserstack_username = "marjanaaktar1";
+    public String browserstack_accesskey = "xRikQZzPvx7nboWEgGtj";
+
     public String saucelabs_username = "";
     public String saucelabs_accesskey = "";
 
@@ -49,7 +55,9 @@ public class CommonAPI {
     @BeforeMethod
     public void setUp(@Optional("false") boolean useCloudEnv, @Optional("false") String cloudEnvName,
                       @Optional("OS X") String os, @Optional("10") String os_version, @Optional("chrome-options") String browserName, @Optional("34")
+
                               String browserVersion, @Optional("http://www.AliExpress.com") String url) throws IOException {
+                              String browserVersion, @Optional("http://www.facebook.com") String url) throws IOException {
         //System.setProperty("webdriver.chrome.driver", "/Users/peoplentech/eclipse-workspace-March2018/SeleniumProject1/driver/chromedriver");
         if (useCloudEnv == true) {
             if (cloudEnvName.equalsIgnoreCase("browserstack")) {

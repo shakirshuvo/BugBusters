@@ -7,13 +7,23 @@
     <parameter name="cloudEnvName" value="browserstack"/>
     <parameter name="os" value="Windows"/>
     <parameter name="os_version" value="10"/>
-    <parameter name="browserName" value="chrome"/>
+    <parameter name="browserName" value="chrome-options"/>
     <parameter name="browserVersion" value="78.0"/>
     <parameter name="url" value="https://www.homedepot.com"/>
 
     <test name="Home Depot Home">
         <classes>
-<!--            <class name="home.HomeDepotHomePageTest"/>-->
+<!--            <class name="home.TestHomeDepotPage"/>-->
+<!--            <class name="cart.TestCart"/>-->
+<!--            <class name="testStoreFinder.TestStoreFinderTest"/>-->
+<!--            <class name="rental.TestStoreFinderTest/>-->
+<!--            <class name="forThePro.TestForThePro"/>-->
+                <class name="cart.TestCheckout"/>
+<!--            <class name="giftCards.TestGiftCards"/>-->
+<!--            <class name="cart.TestPaypal"/>-->
+<!--            <class name="creditServices.TestCreditServices"/>-->
+<!--                <class name="signIN.TestSiGnIn"/>-->
+<!--            <class name="creditServices.TestCreditServices"/>-->
         </classes>
     </test>
 

@@ -12,8 +12,20 @@ public class TestSignIn extends CommonAPI {
     public void validateSignInButton() {
         SignIn signIn = PageFactory.initElements (driver, SignIn.class);
         signIn.clickOnSignOn ();
+    }
+    @Test
+    public void validateUsername(){
+        SignIn signIn = PageFactory.initElements (driver,SignIn.class);
         signIn.userName ();
+    }
+    @Test
+    public void validatePassword(){
+        SignIn signIn = PageFactory.initElements (driver,SignIn.class);
         signIn.password ();
+    }
+    @Test
+    public void validateSignIn() {
+        SignIn signIn = PageFactory.initElements (driver, SignIn.class);
         signIn.clickSignInButton ();
     }
 }

@@ -5,6 +5,7 @@ import datasuply.DataSource;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.testng.Assert;
 import reporting.TestLogger;
 
 import java.io.IOException;
@@ -62,6 +63,8 @@ public class AmazonSearchPage extends CommonAPI {
             typeItemName(list.get(i));
             clickOnSearch();
         }
+        Assert.assertNotNull(getItems(), "watch");
+        Assert.assertNotNull(getItems(), "Rage Against The Machine");
     }
 
     public void searchItemsAndSubmitButton() throws Exception, IOException, SQLException, ClassNotFoundException {
@@ -100,6 +103,7 @@ public class AmazonSearchPage extends CommonAPI {
         }.getClass().getEnclosingMethod().getName()));
         typeItemName("iPhone");
         clickOnSearch();
+        Assert.assertNotNull("iPhone");
     }
 
 }

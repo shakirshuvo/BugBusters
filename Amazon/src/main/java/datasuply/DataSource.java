@@ -10,7 +10,8 @@ import java.util.List;
 public class DataSource {
 
     public static ConnectToSqlDB connectToSqlDB = new ConnectToSqlDB();
-    public static List<String> getItemValue(){
+
+    public static List<String> getItemValue() {
         List<String> itemsList = new ArrayList<String>();
         itemsList.add("Java Book");
         itemsList.add("Selenium Book");
@@ -25,13 +26,13 @@ public class DataSource {
     }
     //Database
 
-    public static List<String> getItemsListFromDB()throws Exception, IOException, SQLException, ClassNotFoundException {
+    public static List<String> getItemsListFromDB() throws Exception, IOException, SQLException, ClassNotFoundException {
         List<String> list = new ArrayList<>();
         list = connectToSqlDB.readDataBase("movie", "title");
         return list;
     }
 
-    public static void main(String[] args) throws Exception, IOException, SQLException, ClassNotFoundException{
+    public static void main(String[] args) throws Exception, IOException, SQLException, ClassNotFoundException {
         List<String> list = new ArrayList<>();
         list = connectToSqlDB.readDataBase("movie", "title");
         System.out.println(list.get(0));
