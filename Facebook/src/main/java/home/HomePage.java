@@ -9,13 +9,6 @@ import org.testng.annotations.Test;
 import java.util.ArrayList;
 public class HomePage extends CommonAPI {
 
-    @Test(enabled = false)
-    public void login(String email, String password) {
-        driver.findElement(By.id("email")).sendKeys(email);
-        driver.findElement(By.id("pass")).sendKeys(password);
-        driver.findElement(By.cssSelector("input[value='Log In']")).click();
-    }
-
     @FindBy(id = "email")
     WebElement emailField;
 
@@ -48,7 +41,8 @@ public class HomePage extends CommonAPI {
 
     @FindBy(css = "a[ href='https://www.facebook.com/?ref=tn_tnmn']")
     WebElement homeButton;
-
+    @FindBy(css="div[data-click='home_icon']")
+    WebElement homeTab;
     @FindBy(css = "div[class='_59fb _tmz']")
     WebElement quickHelpIcon;
 
@@ -151,6 +145,9 @@ public class HomePage extends CommonAPI {
     @FindBy(css = "label[class='_55r1 _55r2 _58ak _3ct8']")
     WebElement createCollectiontab;
 
+//    @FindBy(xpath = "//*[@id=\"navItem_1572366616371383\"]/a/div']")
+//    WebElement Friendlists;
+
     public void navigateToFacebook() {
         driver.get("https://facebook.com");
     }
@@ -167,7 +164,7 @@ public class HomePage extends CommonAPI {
     }
 
     public void goToFacebookHome() {
-        facebookTab.click();
+        homeTab.click();
     }
 
     public void writeSomethingOnSearchBar(String name) {
