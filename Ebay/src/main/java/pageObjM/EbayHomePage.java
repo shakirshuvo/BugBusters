@@ -31,6 +31,7 @@ public class EbayHomePage extends CommonAPI {
     @FindBy(linkText = "Motors")
     public static WebElement Motors;
 
+
     public void validateMotorsOptionDisplayed() {
         Assert.assertEquals(Motors.isDisplayed(), true);
     }
@@ -89,4 +90,58 @@ public class EbayHomePage extends CommonAPI {
         ShopByCategory.click ();
         Assert.assertEquals (ShopByCategory.isDisplayed (), true);
     }
+    @FindBy(linkText = "Collectibles & Art")
+    public static WebElement CollectiblesAndArt;
+
+    public void validateCollectiblesAndArtDisplayed(){
+        Assert.assertEquals (CollectiblesAndArt.isDisplayed (),true);
+    }
+    public void validateCollectiblesAndArtClickable(){
+        CollectiblesAndArt.click ();
+        Assert.assertEquals (CollectiblesAndArt.isDisplayed (),true);
+    }
+
+    @FindBy(linkText = "Home & Garden")
+    public static WebElement HomeAndGarden;
+
+    public void validateHomeAndGardenDisplayed(){
+        Assert.assertEquals (HomeAndGarden.isDisplayed (),true);
+    }
+    public void validateHomeAndGardenClickable(){
+        HomeAndGarden.click ();
+        Assert.assertEquals (HomeAndGarden.isDisplayed (),true);
+    }
+    @FindBy(linkText = "Sporting Goods")
+    public static WebElement SportingGoods;
+
+    public void validateSportingGoodsDisplayed(){
+        Assert.assertEquals (SportingGoods.isDisplayed (),true);
+    }
+    public void validateSportingGoodsClickable(){
+        SportingGoods.click ();
+        Assert.assertEquals (SportingGoods.isDisplayed (),true);
+    }
+    @FindBy(linkText = "Toys")
+    public static WebElement toys;
+
+    public void validateToys(){
+        Assert.assertEquals (toys.isDisplayed (),true);
+    }
+    public void validateToysClickable(){
+        toys.click ();
+        Assert.assertEquals (toys.isDisplayed (),true);
+    }
+    //Business & Industrial
+
+    @FindBy(linkText = "Business & Industrial")
+    public static WebElement businessAndIndustrial;
+
+    public void validateBusinessAndIndustrial(){
+        Assert.assertEquals (businessAndIndustrial.isDisplayed (),true);
+    }
+    public void validateBusinessAndIndustrialClickable(){
+        businessAndIndustrial.click ();
+        Assert.assertEquals (businessAndIndustrial.isDisplayed (),true);
+    }
 }
+

@@ -69,13 +69,10 @@ public class Registration extends CommonAPI {
     public void password(){
         getPassword ().sendKeys ("peopleNtech");
     }
-
     public void clickCheckBox(){
         getCheckBox ().click ();
     }
-
     public void clickCreateAccountButton(){
        getCreateAccountButton ().click ();
     }
-
 }
