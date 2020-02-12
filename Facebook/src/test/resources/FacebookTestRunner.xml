@@ -3,9 +3,9 @@
 
 <suite name="Facebook Automation Script " parallel="false">
 
-    <parameter name="useCloudEnv" value="false"/>
+    <parameter name="useCloudEnv" value="true"/>
     <parameter name="cloudEnvName" value="browserstack"/>
-    <parameter name="os" value="OS X"/>
+    <parameter name="os" value="Windows"/>
     <parameter name="os_version" value="chrome-options"/>
     <parameter name="browserName" value="chrome-options"/>
     <parameter name="browserVersion" value="78.0"/>
@@ -13,9 +13,9 @@
 
     <test name="Facebook Home">
         <classes>
-            <class name="home.HomeTest"></class>
-            <class name="home.HomeTest"/>
-<!--            <class name="dataDrivenTest.DataSearchTest"></class>-->
+<!--            <class name="home.HomeTest"></class>-->
+<!--            <class name="home.HomeTest"/>-->
+            <class name="dataDrivenTest.DataSearchTest"></class>
 <!--            <class name="home.TestkeyWord"></class>-->
         </classes>
     </test>

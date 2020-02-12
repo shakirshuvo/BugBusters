@@ -9,9 +9,8 @@ public class SearchByName extends CommonAPI {
     DataReader dr = new DataReader();
 
     public String[] getDataFromExcelFileForFeaturesChoice() throws IOException, IOException {
-        String path = System.getProperty("user.dir")+"/Users/marjanaaktar/Develop/BugBusters/Facebook/ExcelFile";
+        String path = System.getProperty("user.dir")+"/Users/marjanaaktar/Develop/BugBusters/Facebook/ExcelFile/Book1.xls";
         String [] data = dr.fileReader2(path,0);
         return data;
     }
-
 }

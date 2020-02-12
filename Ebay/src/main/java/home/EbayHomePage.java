@@ -6,33 +6,25 @@ import org.testng.annotations.Test;
 public class EbayHomePage extends CommonAPI {
 
 
-    @Test(enabled = false)
-    public void searchItem() {
+    @Test(enabled = true)
+    public void searchItem(String iphone11) {
 
         System.out.println (driver.getTitle ());
-
         clickOnElement ("//input[@type='text']");
         typeOnElementNEnter ("//input[@type='text']", "iphone11");
         clickOnElement ("//input[@type='submit']");
     }
-    //push recent code
-
-    @Test(enabled = false)
-
-    public void logIn() {
-
+    @Test(enabled = true)
+    public void logIn(String s, String peoplentech) {
         clickOnElement ("//a[contains(text(),'Sign in')]");
         typeOnElement ("/a[contains(text(),'Sign in')]", "sarah.kh");
         typeOnElement ("//input[@id='pass']", "peoplentech");
         clickOnElement ("//button[@id='sgnBt']");
     }
-
     @Test
-    public void registration() {
+    public void registration(String john, String doe, String s, String s1, String peopleNtech) {
         //System.out.println (driver.getTitle ());
-
           clickOnElement ("span#gh-ug-flex > a");
-
           typeOnElement ("input[name='firstname']", "John");
           typeOnElement ("input[name='lastname']", "Doe");
           typeOnElement ("input[name='email']", "jdoe12399100@yahoo.com");

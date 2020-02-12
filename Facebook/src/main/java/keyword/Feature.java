@@ -35,9 +35,4 @@ public class Feature extends CommonAPI {
             select(testSteps[i], driver);
         }
     }
-
-
-
-
-
 }

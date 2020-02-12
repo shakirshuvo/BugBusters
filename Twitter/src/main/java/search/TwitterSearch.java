@@ -340,4 +340,316 @@ public class TwitterSearch extends CommonAPI {
         Assert.assertEquals(expectedUrl,actualUrl);
     }
 
+    public void searchKittens() {
+        login();
+        searchField.sendKeys("kittens");
+        searchField.submit();
+        String expectedUrl = "https://twitter.com/search?q=kittens&src=typed_query";
+        String actualUrl= driver.getCurrentUrl();
+        Assert.assertEquals(expectedUrl,actualUrl);
+    }
+    public void searchLlamas() {
+        login();
+        searchField.sendKeys("llamas");
+        searchField.submit();
+        String expectedUrl = "https://twitter.com/search?q=llamas&src=typed_query";
+        String actualUrl= driver.getCurrentUrl();
+        Assert.assertEquals(expectedUrl,actualUrl);
+    }
+    public void searchRhinos() {
+        login();
+        searchField.sendKeys("rhinos");
+        searchField.submit();
+        String expectedUrl = "https://twitter.com/search?q=rhinos&src=typed_query";
+        String actualUrl= driver.getCurrentUrl();
+        Assert.assertEquals(expectedUrl,actualUrl);
+    }
+    public void searchHorses() {
+        login();
+        searchField.sendKeys("horses");
+        searchField.submit();
+        String expectedUrl = "https://twitter.com/search?q=horses&src=typed_query";
+        String actualUrl= driver.getCurrentUrl();
+        Assert.assertEquals(expectedUrl,actualUrl);
+    }
+    public void searchGiraffe() {
+        login();
+        searchField.sendKeys("giraffe");
+        searchField.submit();
+        String expectedUrl = "https://twitter.com/search?q=giraffe&src=typed_query";
+        String actualUrl= driver.getCurrentUrl();
+        Assert.assertEquals(expectedUrl,actualUrl);
+    }
+    public void searchZebra() {
+        login();
+        searchField.sendKeys("zebra");
+        searchField.submit();
+        String expectedUrl = "https://twitter.com/search?q=zebra&src=typed_query";
+        String actualUrl= driver.getCurrentUrl();
+        Assert.assertEquals(expectedUrl,actualUrl);
+    }
+    public void searchWolf() {
+        login();
+        searchField.sendKeys("wolf");
+        searchField.submit();
+        String expectedUrl = "https://twitter.com/search?q=wolf&src=typed_query";
+        String actualUrl= driver.getCurrentUrl();
+        Assert.assertEquals(expectedUrl,actualUrl);
+    }
+    public void searchKoala() {
+        login();
+        searchField.sendKeys("koala");
+        searchField.submit();
+        String expectedUrl = "https://twitter.com/search?q=koala&src=typed_query";
+        String actualUrl= driver.getCurrentUrl();
+        Assert.assertEquals(expectedUrl,actualUrl);
+    }
+    public void searchSloth() {
+        login();
+        searchField.sendKeys("sloth");
+        searchField.submit();
+        String expectedUrl = "https://twitter.com/search?q=sloth&src=typed_query";
+        String actualUrl= driver.getCurrentUrl();
+        Assert.assertEquals(expectedUrl,actualUrl);
+    }
+    public void searchLion() {
+        login();
+        searchField.sendKeys("lion");
+        searchField.submit();
+        String expectedUrl = "https://twitter.com/search?q=lion&src=typed_query";
+        String actualUrl= driver.getCurrentUrl();
+        Assert.assertEquals(expectedUrl,actualUrl);
+    }
+    public void searchTiger() {
+        login();
+        searchField.sendKeys("tiger");
+        searchField.submit();
+        String expectedUrl = "https://twitter.com/search?q=tiger&src=typed_query";
+        String actualUrl= driver.getCurrentUrl();
+        Assert.assertEquals(expectedUrl,actualUrl);
+    }
+    public void searchCheetah() {
+        login();
+        searchField.sendKeys("cheetah");
+        searchField.submit();
+        String expectedUrl = "https://twitter.com/search?q=cheetah&src=typed_query";
+        String actualUrl= driver.getCurrentUrl();
+        Assert.assertEquals(expectedUrl,actualUrl);
+    }
+    public void searchHyena() {
+        login();
+        searchField.sendKeys("hyena");
+        searchField.submit();
+        String expectedUrl = "https://twitter.com/search?q=hyena&src=typed_query";
+        String actualUrl= driver.getCurrentUrl();
+        Assert.assertEquals(expectedUrl,actualUrl);
+    }
+    public void searchCoyote() {
+        login();
+        searchField.sendKeys("coyote");
+        searchField.submit();
+        String expectedUrl = "https://twitter.com/search?q=coyote&src=typed_query";
+        String actualUrl= driver.getCurrentUrl();
+        Assert.assertEquals(expectedUrl,actualUrl);
+    }
+    public void searchPuma() {
+        login();
+        searchField.sendKeys("puma");
+        searchField.submit();
+        String expectedUrl = "https://twitter.com/search?q=puma&src=typed_query";
+        String actualUrl= driver.getCurrentUrl();
+        Assert.assertEquals(expectedUrl,actualUrl);
+    }
+    public void searchParrot() {
+        login();
+        searchField.sendKeys("parrot");
+        searchField.submit();
+        String expectedUrl = "https://twitter.com/search?q=parrot&src=typed_query";
+        String actualUrl= driver.getCurrentUrl();
+        Assert.assertEquals(expectedUrl,actualUrl);
+    }
+    public void searchMouse() {
+        login();
+        searchField.sendKeys("mouse");
+        searchField.submit();
+        String expectedUrl = "https://twitter.com/search?q=mouse&src=typed_query";
+        String actualUrl= driver.getCurrentUrl();
+        Assert.assertEquals(expectedUrl,actualUrl);
+    }
+    public void searchMoose() {
+        login();
+        searchField.sendKeys("moose");
+        searchField.submit();
+        String expectedUrl = "https://twitter.com/search?q=moose&src=typed_query";
+        String actualUrl= driver.getCurrentUrl();
+        Assert.assertEquals(expectedUrl,actualUrl);
+    }
+    public void searchHippo() {
+        login();
+        searchField.sendKeys("hippo");
+        searchField.submit();
+        String expectedUrl = "https://twitter.com/search?q=hippo&src=typed_query";
+        String actualUrl= driver.getCurrentUrl();
+        Assert.assertEquals(expectedUrl,actualUrl);
+    }
+    public void searchAttackOnTitan() {
+        login();
+        searchField.sendKeys("attack on titan");
+        searchField.submit();
+        String expectedUrl = "https://twitter.com/search?q=attack%20on%20titan&src=typed_query";
+        String actualUrl= driver.getCurrentUrl();
+        Assert.assertEquals(expectedUrl,actualUrl);
+    }
+    public void searchCodeGeass() {
+        login();
+        searchField.sendKeys("code geass");
+        searchField.submit();
+        String expectedUrl = "https://twitter.com/search?q=code%20geass&src=typed_query";
+        String actualUrl= driver.getCurrentUrl();
+        Assert.assertEquals(expectedUrl,actualUrl);
+    }
+    public void searchDeathNote() {
+        login();
+        searchField.sendKeys("death note");
+        searchField.submit();
+        String expectedUrl = "https://twitter.com/search?q=death%20note&src=typed_query";
+        String actualUrl= driver.getCurrentUrl();
+        Assert.assertEquals(expectedUrl,actualUrl);
+    }
+    public void searchFairyTail() {
+        login();
+        searchField.sendKeys("fairy tail");
+        searchField.submit();
+        String expectedUrl = "https://twitter.com/search?q=fairy%20tail&src=typed_query";
+        String actualUrl= driver.getCurrentUrl();
+        Assert.assertEquals(expectedUrl,actualUrl);
+    }
+    public void searchMyHeroAcademia() {
+        login();
+        searchField.sendKeys("my hero academia");
+        searchField.submit();
+        String expectedUrl = "https://twitter.com/search?q=my%20hero%20academia&src=typed_query";
+        String actualUrl= driver.getCurrentUrl();
+        Assert.assertEquals(expectedUrl,actualUrl);
+    }
+    public void searchNoGameNoLife() {
+        login();
+        searchField.sendKeys("no game no life");
+        searchField.submit();
+        String expectedUrl = "https://twitter.com/search?q=no%20game%20no%20life&src=typed_query";
+        String actualUrl= driver.getCurrentUrl();
+        Assert.assertEquals(expectedUrl,actualUrl);
+    }
+    public void searchPokemon() {
+        login();
+        searchField.sendKeys("pokemon");
+        searchField.submit();
+        String expectedUrl = "https://twitter.com/search?q=pokemon&src=typed_query";
+        String actualUrl= driver.getCurrentUrl();
+        Assert.assertEquals(expectedUrl,actualUrl);
+    }
+    public void searchDigimon() {
+        login();
+        searchField.sendKeys("digimon");
+        searchField.submit();
+        String expectedUrl = "https://twitter.com/search?q=digimon&src=typed_query";
+        String actualUrl= driver.getCurrentUrl();
+        Assert.assertEquals(expectedUrl,actualUrl);
+    }
+    public void searchOnePunchMan() {
+        login();
+        searchField.sendKeys("one punch man");
+        searchField.submit();
+        String expectedUrl = "https://twitter.com/search?q=one%20punch%20man&src=typed_query";
+        String actualUrl= driver.getCurrentUrl();
+        Assert.assertEquals(expectedUrl,actualUrl);
+    }
+    public void searchAngelBeats() {
+        login();
+        searchField.sendKeys("angel beats");
+        searchField.submit();
+        String expectedUrl = "https://twitter.com/search?q=angel%20beats&src=typed_query";
+        String actualUrl= driver.getCurrentUrl();
+        Assert.assertEquals(expectedUrl,actualUrl);
+    }
+    public void searchKingdomHearts() {
+        login();
+        searchField.sendKeys("kingdom hearts");
+        searchField.submit();
+        String expectedUrl = "https://twitter.com/search?q=kingdom%20hearts&src=typed_query";
+        String actualUrl= driver.getCurrentUrl();
+        Assert.assertEquals(expectedUrl,actualUrl);
+    }
+    public void searchDestiny() {
+        login();
+        searchField.sendKeys("destiny");
+        searchField.submit();
+        String expectedUrl = "https://twitter.com/search?q=destiny&src=typed_query";
+        String actualUrl= driver.getCurrentUrl();
+        Assert.assertEquals(expectedUrl,actualUrl);
+    }
+    public void searchHalo() {
+        login();
+        searchField.sendKeys("halo");
+        searchField.submit();
+        String expectedUrl = "https://twitter.com/search?q=halo&src=typed_query";
+        String actualUrl= driver.getCurrentUrl();
+        Assert.assertEquals(expectedUrl,actualUrl);
+    }
+    public void searchFinalFantasy() {
+        login();
+        searchField.sendKeys("final fantasy");
+        searchField.submit();
+        String expectedUrl = "https://twitter.com/search?q=final%20fantasy&src=typed_query";
+        String actualUrl= driver.getCurrentUrl();
+        Assert.assertEquals(expectedUrl,actualUrl);
+    }
+    public void searchApexLegends() {
+        login();
+        searchField.sendKeys("apex legends");
+        searchField.submit();
+        String expectedUrl = "https://twitter.com/search?q=apex%20legends&src=typed_query";
+        String actualUrl= driver.getCurrentUrl();
+        Assert.assertEquals(expectedUrl,actualUrl);
+    }
+    public void searchWarframe() {
+        login();
+        searchField.sendKeys("warframe");
+        searchField.submit();
+        String expectedUrl = "https://twitter.com/search?q=warframe&src=typed_query";
+        String actualUrl= driver.getCurrentUrl();
+        Assert.assertEquals(expectedUrl,actualUrl);
+    }
+    public void searchSlimeRancher() {
+        login();
+        searchField.sendKeys("slime rancher");
+        searchField.submit();
+        String expectedUrl = "https://twitter.com/search?q=slime%20rancher&src=typed_query";
+        String actualUrl= driver.getCurrentUrl();
+        Assert.assertEquals(expectedUrl,actualUrl);
+    }
+    public void searchMinecraft() {
+        login();
+        searchField.sendKeys("minecraft");
+        searchField.submit();
+        String expectedUrl = "https://twitter.com/search?q=minecraft&src=typed_query";
+        String actualUrl= driver.getCurrentUrl();
+        Assert.assertEquals(expectedUrl,actualUrl);
+    }
+    public void searchGodOfWar() {
+        login();
+        searchField.sendKeys("god of war");
+        searchField.submit();
+        String expectedUrl = "https://twitter.com/search?q=god%20of%20war&src=typed_query";
+        String actualUrl= driver.getCurrentUrl();
+        Assert.assertEquals(expectedUrl,actualUrl);
+    }
+    public void searchLastOfUs() {
+        login();
+        searchField.sendKeys("last of us");
+        searchField.submit();
+        String expectedUrl = "https://twitter.com/search?q=last%20of%20us&src=typed_query";
+        String actualUrl= driver.getCurrentUrl();
+        Assert.assertEquals(expectedUrl,actualUrl);
+    }
 }

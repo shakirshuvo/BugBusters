@@ -145,8 +145,8 @@ public class HomePage extends CommonAPI {
     @FindBy(css = "label[class='_55r1 _55r2 _58ak _3ct8']")
     WebElement createCollectiontab;
 
-    @FindBy(xpath = "//*[@id=\"navItem_1572366616371383\"]/a/div']")
-    WebElement Friendlists;
+//    @FindBy(xpath = "//*[@id=\"navItem_1572366616371383\"]/a/div']")
+//    WebElement Friendlists;
 
     public void navigateToFacebook() {
         driver.get("https://facebook.com");
