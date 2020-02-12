@@ -1,12 +1,10 @@
-package ChangeLanguage;
+package AliExpressChangeLanguageTest;
 
 import base.CommonAPI;
 import org.openqa.selenium.By;
-import org.openqa.selenium.remote.server.handler.ImplicitlyWait;
 import org.testng.annotations.Test;
 
-public class AliExpressChangeLanguage extends CommonAPI {
-
+public class TestAliExpressChangeLanguage extends CommonAPI {
     @Test
     public void AliExpressChangeLanguage1() throws Exception {
         driver.findElement(By.linkText("x")).click();
@@ -105,3 +103,5 @@ public class AliExpressChangeLanguage extends CommonAPI {
         driver.findElement(By.xpath("//button[@type='button']")).click();
     }
 }
+
+
