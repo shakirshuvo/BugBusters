@@ -1,29 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="Home Depot Automation Script " parallel="false">
+<suite name="Home Depot Automation Script " parallel="true">
 
     <parameter name="useCloudEnv" value="false"/>
     <parameter name="cloudEnvName" value="browserstack"/>
     <parameter name="os" value="Windows"/>
     <parameter name="os_version" value="10"/>
-    <parameter name="browserName" value="chrome-options"/>
-    <parameter name="browserVersion" value="78.0"/>
-    <parameter name="url" value="https://www.homedepot.com"/>
+    <parameter name="browserName" value="Chrome-options"/>
+    <parameter name="browserVersion" value="78"/>
+    <parameter name="url" value="http://www.homedepot.com"/>
 
     <test name="Home Depot Home">
         <classes>
-<!--            <class name="home.TestHomeDepotPage"/>-->
-<!--            <class name="cart.TestCart"/>-->
-<!--            <class name="testStoreFinder.TestStoreFinderTest"/>-->
-<!--            <class name="rental.TestStoreFinderTest/>-->
-<!--            <class name="forThePro.TestForThePro"/>-->
-                <class name="cart.TestCheckout"/>
-<!--            <class name="giftCards.TestGiftCards"/>-->
+            <class name="cart.TestCart"/>
+<!--            <class name="cart.TestCheckout"/>-->
 <!--            <class name="cart.TestPaypal"/>-->
 <!--            <class name="creditServices.TestCreditServices"/>-->
-<!--                <class name="signIN.TestSiGnIn"/>-->
-<!--            <class name="creditServices.TestCreditServices"/>-->
+<!--            <class name="favorites.TestFavorites"/>-->
+<!--            <class name="forThePro.TestForThePro"/>-->
+<!--            <class name="rental.TestTruckToolRental"/>-->
+<!--            <class name="giftCards.TestGiftCards"/>-->
+            <class name="home.TestHomeDepotPage"/>
+<!--            <class name="localAd.TestLocalAds"/>-->
+<!--            <class name="rental.TestTruckToolRental"/>-->
+<!--            <class name="signIN.TestSiGnIn"/>-->
+<!--            <class name="testStoreFinder.TestStoreFinderTest"/>-->
+<!--            <class name="testKeywordDriven.TestKeywordDriven"/>-->
         </classes>
     </test>
 

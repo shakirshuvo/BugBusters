@@ -7,8 +7,8 @@
     <parameter name="cloudEnvName" value="browserstack"/>
     <parameter name="os" value="Windows"/>
     <parameter name="os_version" value="10"/>
-    <parameter name="browserName" value="chrome-options"/>
-    <parameter name="browserVersion" value="78.0"/>
+    <parameter name="browserName" value=""/>
+    <parameter name="browserVersion" value="80"/>
     <parameter name="url" value="https://www.piit.us"/>
 
     <test name="Employee Information Services">
